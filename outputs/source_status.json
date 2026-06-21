@@ -1,0 +1,47 @@
+{
+  "cutoff": "2025-06-18",
+  "sources": [
+    {
+      "source": "Play Store",
+      "url": "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_IN",
+      "records_collected": 500,
+      "status": "ok"
+    },
+    {
+      "source": "App Store",
+      "url": "https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580",
+      "records_collected": 499,
+      "status": "ok"
+    },
+    {
+      "source": "Reddit",
+      "url": "https://www.reddit.com/r/spotify/",
+      "records_collected": 100,
+      "status": "ok via RSS/HTML fallback"
+    },
+    {
+      "source": "Reddit",
+      "url": "https://www.reddit.com/r/truespotify/",
+      "records_collected": 0,
+      "status": "failed: Reddit JSON blocked and fallback returned no records (HTTP 429)"
+    },
+    {
+      "source": "Reddit",
+      "url": "https://www.reddit.com/r/unpopularopinion/comments/1sq0znz/spotify_is_horrible/",
+      "records_collected": 0,
+      "status": "failed: Reddit JSON blocked and fallback returned no records (HTTP 429)"
+    },
+    {
+      "source": "Spotify Community",
+      "url": "https://community.spotify.com/t5/Ongoing-Issues/idb-p/ongoing_issues",
+      "records_collected": 51,
+      "status": "ok"
+    },
+    {
+      "source": "X",
+      "url": "https://x.com/Spotify?lang=en",
+      "records_collected": 0,
+      "status": "skipped: X requires API access or an authenticated export; set X_BEARER_TOKEN for API collection"
+    }
+  ]
+}

@@ -1,0 +1,1503 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Review Analysis Workflow</title>
+    <style>
+      :root {
+        --ink: #142018;
+        --muted: #647268;
+        --soft: #eef3ed;
+        --line: #dce5db;
+        --panel: #ffffff;
+        --bg: #f7f9f4;
+        --green: #1db954;
+        --green-dark: #0e7a36;
+        --blue: #315f9f;
+        --plum: #7c4d79;
+        --amber: #b36a10;
+        --shadow: 0 18px 42px rgba(21, 36, 24, 0.10);
+      }
+
+      body[data-theme="dark"] {
+        --ink: #f4f8f3;
+        --muted: #c1d0c1;
+        --soft: #26382d;
+        --line: #405346;
+        --panel: #17231c;
+        --bg: #0b110e;
+        --green: #1ed760;
+        --green-dark: #8df4ad;
+        --blue: #8fb9ff;
+        --plum: #d5a0d1;
+        --amber: #f0b661;
+        --shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--ink);
+        background:
+          linear-gradient(180deg, rgba(29, 185, 84, 0.10), rgba(247, 249, 244, 0) 360px),
+          var(--bg);
+      }
+
+      body[data-theme="dark"] {
+        background:
+          linear-gradient(180deg, rgba(29, 215, 96, 0.08), rgba(13, 20, 16, 0) 360px),
+          var(--bg);
+      }
+
+      a {
+        color: var(--green-dark);
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      body[data-theme="dark"] a {
+        color: #9ff8b9;
+      }
+
+      a:hover { text-decoration: underline; }
+
+      .topbar {
+        border-bottom: 1px solid rgba(220, 229, 219, 0.9);
+        background: rgba(255, 255, 255, 0.82);
+        backdrop-filter: blur(14px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      body[data-theme="dark"] .topbar {
+        border-bottom-color: rgba(49, 64, 55, 0.9);
+        background: rgba(13, 20, 16, 0.82);
+      }
+
+      .topbar-inner {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 16px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        background: var(--green);
+        display: grid;
+        place-items: center;
+        box-shadow: 0 10px 24px rgba(29, 185, 84, 0.28);
+      }
+
+      body[data-theme="dark"] .brand-mark {
+        box-shadow: 0 10px 24px rgba(30, 215, 96, 0.20);
+      }
+
+      .brand-mark::before {
+        content: "";
+        width: 18px;
+        height: 12px;
+        border-top: 3px solid #073b18;
+        border-bottom: 3px solid #073b18;
+        transform: skewY(-8deg);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 21px;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 3px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border-radius: 999px;
+        background: #edf8f0;
+        color: #0d6f31;
+        border: 1px solid #cfead6;
+        padding: 8px 11px;
+        font-size: 12px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .sentiment-chip {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 999px;
+        padding: 6px 9px;
+        border: 1px solid #cbd8c8;
+        background: #f4f8f2;
+        color: #314235;
+        font-size: 11px;
+        font-weight: 900;
+        white-space: nowrap;
+      }
+
+      .sentiment-chip.negative {
+        border-color: #f0c1bd;
+        background: #fff0ee;
+        color: #9b2d25;
+      }
+
+      .sentiment-chip.positive {
+        border-color: #bce8c7;
+        background: #effaf2;
+        color: #0d6f31;
+      }
+
+      .sentiment-chip.mixed {
+        border-color: #ead39c;
+        background: #fff8e5;
+        color: #80530c;
+      }
+
+      body[data-theme="dark"] .sentiment-chip {
+        border-color: #4b6152;
+        background: #202d25;
+        color: #edf5ee;
+      }
+
+      body[data-theme="dark"] .sentiment-chip.negative {
+        border-color: #8f3e38;
+        background: #3a1d1a;
+        color: #ffb9b2;
+      }
+
+      body[data-theme="dark"] .sentiment-chip.positive {
+        border-color: #2d6b42;
+        background: #183624;
+        color: #b8ffd0;
+      }
+
+      body[data-theme="dark"] .sentiment-chip.mixed {
+        border-color: #7f6330;
+        background: #332817;
+        color: #ffe0a1;
+      }
+
+      body[data-theme="dark"] .tag {
+        background: #183624;
+        color: #b8ffd0;
+        border-color: #2d6b42;
+      }
+
+      .top-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .theme-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        min-height: 36px;
+        padding: 7px 10px;
+        background: var(--panel);
+        color: var(--ink);
+        box-shadow: none;
+      }
+
+      body[data-theme="dark"] .theme-toggle {
+        background: #1f2e25;
+        border-color: #4b6152;
+      }
+
+      .theme-toggle:hover {
+        transform: translateY(-1px);
+      }
+
+      .theme-toggle .toggle-icon {
+        width: 18px;
+        height: 18px;
+        display: grid;
+        place-items: center;
+      }
+
+      .theme-toggle svg {
+        width: 18px;
+        height: 18px;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
+
+      .theme-toggle span:last-child {
+        font-size: 12px;
+        font-weight: 900;
+      }
+
+      main {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 28px 24px 44px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+        gap: 22px;
+        align-items: stretch;
+        margin-bottom: 22px;
+      }
+
+      .hero-copy {
+        padding: 34px;
+        border-radius: 8px;
+        background: #102116;
+        color: #ffffff;
+        box-shadow: var(--shadow);
+      }
+
+      body[data-theme="dark"] .hero-copy {
+        background: #111d17;
+        border: 1px solid #34483a;
+      }
+
+      .kicker {
+        color: #9ce2b3;
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+
+      .hero h2 {
+        margin: 0;
+        max-width: 780px;
+        font-size: 42px;
+        line-height: 1.06;
+        letter-spacing: 0;
+      }
+
+      .hero p {
+        max-width: 720px;
+        color: #d6e3d7;
+        font-size: 16px;
+        line-height: 1.55;
+        margin: 16px 0 0;
+      }
+
+      .question-block {
+        margin-top: 20px;
+        padding: 16px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      body[data-theme="dark"] .question-block {
+        border-color: #405346;
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .question-block strong {
+        display: block;
+        color: #ffffff;
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+
+      .question-block ul {
+        margin: 0;
+        padding-left: 18px;
+        color: #d6e3d7;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .question-block li {
+        margin: 5px 0;
+      }
+
+      .workflow-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 24px;
+      }
+
+      .workflow-step {
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+        padding: 9px 12px;
+        color: #f1fff4;
+        font-weight: 800;
+        font-size: 13px;
+      }
+
+      body[data-theme="dark"] .workflow-step {
+        border-color: #405346;
+        background: rgba(255, 255, 255, 0.07);
+        color: #f2fff5;
+      }
+
+      .control-panel {
+        display: grid;
+        gap: 14px;
+      }
+
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 18px;
+        box-shadow: 0 8px 26px rgba(26, 43, 31, 0.06);
+      }
+
+      body[data-theme="dark"] .panel {
+        background: var(--panel);
+        border-color: var(--line);
+        box-shadow: 0 8px 26px rgba(0, 0, 0, 0.20);
+      }
+
+      .panel h3,
+      .panel h2 {
+        margin: 0 0 12px;
+        font-size: 17px;
+        letter-spacing: 0;
+      }
+
+      .panel p {
+        color: var(--muted);
+        margin: 0 0 14px;
+        line-height: 1.45;
+        font-size: 14px;
+      }
+
+      .row {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      button {
+        appearance: none;
+        border: 1px solid #bccbb9;
+        background: #ffffff;
+        color: var(--ink);
+        border-radius: 7px;
+        min-height: 42px;
+        padding: 10px 14px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+      }
+
+      body[data-theme="dark"] button {
+        background: #202d25;
+        border-color: #3b4d42;
+        color: var(--ink);
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+        border-color: #8aa685;
+        box-shadow: 0 8px 18px rgba(21, 36, 24, 0.10);
+      }
+
+      button.primary {
+        background: var(--green);
+        border-color: var(--green);
+        color: #062b13;
+      }
+
+      body[data-theme="dark"] button.primary {
+        background: var(--green);
+        border-color: var(--green);
+        color: #04180b;
+      }
+
+      button.secondary {
+        background: #f7faf5;
+        border-color: #cbd8c8;
+        color: #314235;
+      }
+
+      body[data-theme="dark"] button.secondary {
+        background: #202d25;
+        border-color: #3b4d42;
+        color: var(--ink);
+      }
+
+      input[type="file"] {
+        width: 100%;
+        min-height: 42px;
+        border: 1px dashed #a9bca6;
+        border-radius: 7px;
+        padding: 9px;
+        background: #fbfdf9;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 104px;
+        resize: vertical;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        padding: 11px 12px;
+        background: #fbfdf9;
+        color: var(--ink);
+        font: inherit;
+        line-height: 1.45;
+      }
+
+      body[data-theme="dark"] input[type="file"] {
+        background: #111a15;
+        border-color: #3b4d42;
+        color: var(--ink);
+      }
+
+      body[data-theme="dark"] textarea {
+        background: #111a15;
+        border-color: #3b4d42;
+        color: var(--ink);
+      }
+
+      .note {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.45;
+        margin-top: 10px;
+      }
+
+      #message {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 24px;
+        margin: 4px 0 14px;
+        color: var(--green-dark);
+        font-weight: 800;
+        font-size: 13px;
+      }
+
+      body[data-theme="dark"] #message {
+        color: #b8ffd0;
+      }
+
+      #message.investigating {
+        align-items: stretch;
+        min-height: 0;
+        margin: 0 0 16px;
+        padding: 0;
+        color: var(--ink);
+      }
+
+      .spinner {
+        width: 16px;
+        height: 16px;
+        border: 2px solid #cfead6;
+        border-top-color: var(--green-dark);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        flex: 0 0 auto;
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
+      .detective-card {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 14px;
+        align-items: center;
+        padding: 14px 16px;
+        border: 1px solid #d9c99c;
+        border-radius: 8px;
+        background:
+          linear-gradient(135deg, rgba(255, 250, 233, 0.96), rgba(255, 255, 255, 0.92)),
+          #fff8df;
+        box-shadow: 0 12px 28px rgba(68, 50, 18, 0.10);
+      }
+
+      body[data-theme="dark"] .detective-card {
+        border-color: #665936;
+        background:
+          linear-gradient(135deg, rgba(45, 38, 20, 0.96), rgba(24, 35, 29, 0.94)),
+          #221f14;
+      }
+
+      body[data-theme="dark"] .detective-lens,
+      body[data-theme="dark"] .detective-lens::after {
+        border-color: #f4f8f3;
+        background: #f4f8f3;
+      }
+
+      body[data-theme="dark"] .detective-lens {
+        background: transparent;
+      }
+
+      body[data-theme="dark"] .detective-copy strong {
+        color: #fff7dc;
+      }
+
+      body[data-theme="dark"] .detective-copy span {
+        color: #e4d9bb;
+      }
+
+      body[data-theme="dark"] .detective-progress {
+        background: #51472c;
+      }
+
+      .detective-lens {
+        position: relative;
+        width: 42px;
+        height: 42px;
+        border: 3px solid #1f2b22;
+        border-radius: 50%;
+        animation: inspect 1.15s ease-in-out infinite;
+      }
+
+      .detective-lens::after {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 4px;
+        right: -13px;
+        bottom: 1px;
+        border-radius: 999px;
+        background: #1f2b22;
+        transform: rotate(45deg);
+        transform-origin: left center;
+      }
+
+      .detective-lens::before {
+        content: "";
+        position: absolute;
+        inset: 8px;
+        border-top: 2px solid rgba(29, 185, 84, 0.75);
+        border-bottom: 2px solid rgba(49, 95, 159, 0.50);
+        border-radius: 50%;
+      }
+
+      @keyframes inspect {
+        0%, 100% { transform: rotate(-8deg) translateX(0); }
+        50% { transform: rotate(8deg) translateX(4px); }
+      }
+
+      .detective-copy strong {
+        display: block;
+        color: #1f2b22;
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .detective-copy span {
+        display: block;
+        color: #65583a;
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      .clue-dots {
+        display: inline-flex;
+        gap: 3px;
+        margin-left: 4px;
+        vertical-align: middle;
+      }
+
+      .clue-dots i {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: var(--green-dark);
+        animation: cluePulse 0.9s ease-in-out infinite;
+      }
+
+      .clue-dots i:nth-child(2) { animation-delay: 0.14s; }
+      .clue-dots i:nth-child(3) { animation-delay: 0.28s; }
+
+      @keyframes cluePulse {
+        0%, 100% { opacity: 0.35; transform: translateY(0); }
+        50% { opacity: 1; transform: translateY(-3px); }
+      }
+
+      .detective-progress {
+        position: relative;
+        height: 6px;
+        margin-top: 9px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: #eadfbf;
+      }
+
+      .detective-progress::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 36%;
+        border-radius: inherit;
+        background: var(--green);
+        animation: sweep 1.4s ease-in-out infinite;
+      }
+
+      @keyframes sweep {
+        0% { transform: translateX(-105%); }
+        100% { transform: translateX(290%); }
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .span-3 { grid-column: span 3; }
+      .span-4 { grid-column: span 4; }
+      .span-6 { grid-column: span 6; }
+      .span-8 { grid-column: span 8; }
+      .wide { grid-column: 1 / -1; }
+
+      .metric-card {
+        min-height: 148px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .metric-icon {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+        width: 46px;
+        height: 46px;
+        border-radius: 8px;
+        background: var(--soft);
+        color: var(--green-dark);
+        display: grid;
+        place-items: center;
+      }
+
+      .metric-icon svg {
+        width: 23px;
+        height: 23px;
+        stroke: currentColor;
+        stroke-width: 2.2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
+
+      .label {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .metric {
+        font-size: 42px;
+        font-weight: 900;
+        color: var(--green-dark);
+        line-height: 1;
+        margin: 12px 0 7px;
+      }
+
+      body[data-theme="dark"] .metric {
+        color: #8df4ad;
+      }
+
+      .metric-title {
+        color: var(--ink);
+        font-weight: 800;
+        line-height: 1.3;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+
+      .section-title h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+
+      th, td {
+        text-align: left;
+        border-bottom: 1px solid var(--line);
+        padding: 12px 8px;
+        vertical-align: top;
+        line-height: 1.35;
+      }
+
+      th {
+        color: var(--muted);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0;
+        background: #fbfcfa;
+      }
+
+      body[data-theme="dark"] th {
+        background: #111a15;
+        color: #c1d0c1;
+      }
+
+      body[data-theme="dark"] td {
+        color: #edf5ee;
+      }
+
+      tr:last-child td { border-bottom: 0; }
+
+      .score {
+        display: inline-grid;
+        place-items: center;
+        min-width: 42px;
+        height: 30px;
+        border-radius: 999px;
+        background: #102116;
+        color: #ffffff;
+        font-weight: 900;
+      }
+
+      body[data-theme="dark"] .score {
+        background: #dffce8;
+        color: #07180d;
+      }
+
+      .list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .list li {
+        border-left: 4px solid var(--green);
+        padding: 8px 0 8px 12px;
+        color: #304035;
+        line-height: 1.45;
+      }
+
+      body[data-theme="dark"] .list li {
+        color: #edf5ee;
+      }
+
+      .mini-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .mini-row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .mini-row:last-child { border-bottom: 0; }
+
+      .bar {
+        height: 8px;
+        border-radius: 999px;
+        background: #e8eee6;
+        overflow: hidden;
+        margin-top: 7px;
+      }
+
+      body[data-theme="dark"] .bar {
+        background: #26382d;
+      }
+
+      .bar span {
+        display: block;
+        height: 100%;
+        border-radius: inherit;
+        background: var(--green);
+      }
+
+      .problem {
+        background: #102116;
+        color: #ffffff;
+        border-color: #102116;
+      }
+
+      body[data-theme="dark"] .problem {
+        background: #0f1a14;
+        border-color: #405346;
+      }
+
+      .problem p {
+        color: #e0ece2;
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      .ask-panel {
+        margin: 0 0 16px;
+      }
+
+      .ask-panel.locked {
+        opacity: 0.86;
+      }
+
+      .ask-form {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .ask-form input {
+        width: 100%;
+        min-height: 44px;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        padding: 11px 12px;
+        background: #fbfdf9;
+        color: var(--ink);
+        font: inherit;
+      }
+
+      .ask-panel.locked input,
+      .ask-panel.locked button {
+        cursor: not-allowed;
+      }
+
+      .ask-lock-note {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      body[data-theme="dark"] .ask-form input {
+        background: #111a15;
+        border-color: #3b4d42;
+        color: var(--ink);
+      }
+
+      .ask-answer {
+        display: none;
+        margin-top: 14px;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fbfcfa;
+      }
+
+      .ask-answer.visible {
+        display: block;
+      }
+
+      body[data-theme="dark"] .ask-answer {
+        background: #111a15;
+      }
+
+      .ask-answer strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .ask-answer p {
+        margin: 0 0 12px;
+        color: var(--ink);
+      }
+
+      .evidence-list {
+        display: grid;
+        gap: 8px;
+      }
+
+      .evidence-item {
+        border-left: 3px solid var(--green);
+        padding-left: 10px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      .source-status {
+        display: none;
+        margin: 0 0 16px;
+      }
+
+      .source-status.visible {
+        display: block;
+      }
+
+      .status-grid {
+        display: grid;
+        gap: 8px;
+      }
+
+      .status-row {
+        display: grid;
+        grid-template-columns: 130px 90px 1fr;
+        gap: 10px;
+        align-items: start;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 13px;
+      }
+
+      .status-row:last-child {
+        border-bottom: 0;
+      }
+
+      .status-pill {
+        display: inline-flex;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 4px 8px;
+        background: #edf8f0;
+        color: #0d6f31;
+        font-weight: 900;
+      }
+
+      body[data-theme="dark"] .status-pill {
+        background: #183624;
+        color: #b8ffd0;
+      }
+
+      .empty {
+        border: 1px dashed #aebfac;
+        border-radius: 8px;
+        padding: 34px;
+        color: var(--muted);
+        text-align: center;
+        background: rgba(255, 255, 255, 0.72);
+      }
+
+      body[data-theme="dark"] .empty {
+        background: rgba(24, 35, 29, 0.72);
+      }
+
+      .empty strong {
+        display: block;
+        color: var(--ink);
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+
+      body[data-theme="dark"] .empty {
+        color: #c1d0c1;
+      }
+
+      body[data-theme="dark"] .empty strong {
+        color: #f4f8f3;
+      }
+
+      .actions-bar {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin: 0 0 14px;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.78);
+      }
+
+      body[data-theme="dark"] .actions-bar {
+        background: rgba(24, 35, 29, 0.78);
+      }
+
+      .actions-bar.visible {
+        display: flex;
+      }
+
+      .actions-bar span {
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      body[data-theme="dark"] .actions-bar span {
+        color: #c1d0c1;
+      }
+
+      @media (max-width: 980px) {
+        .hero { grid-template-columns: 1fr; }
+        .span-3, .span-4, .span-6, .span-8 { grid-column: 1 / -1; }
+        .hero h2 { font-size: 34px; }
+      }
+
+      @media (max-width: 680px) {
+        .topbar-inner {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 14px 18px;
+        }
+        main { padding: 18px; }
+        .hero-copy { padding: 24px; }
+        .hero h2 { font-size: 29px; }
+        th:nth-child(2), td:nth-child(2) { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div>
+            <h1>AI-Powered Review Discovery Engine</h1>
+            <div class="subtitle">AI-powered system that analyzes user feedback at scale</div>
+          </div>
+        </div>
+        <div class="top-actions">
+          <button class="theme-toggle" id="themeToggle" type="button" title="Toggle light or dark theme">
+            <span class="toggle-icon" id="themeIcon" aria-hidden="true"></span>
+            <span id="themeLabel">Dark</span>
+          </button>
+          <span class="tag">Reviews -> Analysis -> Product Insights</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="kicker">PM case study demo</div>
+          <h2>AI-Powered Review Discovery Engine</h2>
+          <p>AI-powered system that analyzes user feedback at scale.</p>
+          <div class="question-block" aria-label="Questions this system helps answer">
+            <strong>Helps answer:</strong>
+            <ul>
+              <li>Why do users struggle to discover new music?</li>
+              <li>What are the most common frustrations with recommendations?</li>
+              <li>What listening behaviors are users trying to achieve?</li>
+              <li>What causes users to repeatedly listen to the same content?</li>
+              <li>Which user segments experience different discovery challenges?</li>
+              <li>What unmet needs emerge consistently across reviews?</li>
+            </ul>
+          </div>
+          <div class="workflow-strip" aria-label="Workflow steps">
+            <span class="workflow-step">Collect reviews</span>
+            <span class="workflow-step">Extract themes</span>
+            <span class="workflow-step">Rank opportunities</span>
+            <span class="workflow-step">Shape MVPs</span>
+          </div>
+        </div>
+
+        <div class="control-panel">
+          <div class="panel">
+            <h3>Use Existing Spotify Dataset</h3>
+            <p>Load the 183 high-signal discovery records already collected across app stores, Reddit, and Community.</p>
+            <div class="row">
+              <button class="primary" id="loadCurrent" title="Load the analysis already generated from scraped Spotify feedback">Load Current Analysis</button>
+            </div>
+          </div>
+
+          <form class="panel" id="uploadForm">
+            <h3>Upload CSV To Test</h3>
+            <p>Run the same workflow on your own review export.</p>
+            <div class="row">
+              <input type="file" id="file" name="file" accept=".csv" required>
+              <button type="submit" title="Run the workflow against the uploaded CSV">Analyze CSV</button>
+            </div>
+            <div class="note">Expected fields: source, date, text, rating, url, author</div>
+          </form>
+
+          <form class="panel" id="linkForm">
+            <h3>Paste Review Links</h3>
+            <p>Collect reviews or discussions from app stores, Reddit, Spotify Community, and supported social sources.</p>
+            <textarea id="linksInput" placeholder="Paste one link per line&#10;https://play.google.com/store/apps/details?id=com.spotify.music&#10;https://www.reddit.com/r/spotify/"></textarea>
+            <div class="row" style="margin-top: 10px;">
+              <button type="submit" title="Scrape pasted links and analyze collected reviews">Scrape & Analyze Links</button>
+            </div>
+            <div class="note">Some sources may block scraping or require API access. Status will be shown after collection.</div>
+          </form>
+        </div>
+      </section>
+
+      <div id="message"></div>
+      <section id="sourceStatus" class="panel source-status">
+        <h2>Source Collection Status</h2>
+        <div id="sourceStatusRows" class="status-grid"></div>
+      </section>
+      <div id="actionsBar" class="actions-bar">
+        <span>Analysis loaded in workspace</span>
+        <button class="secondary" id="clearAnalysis" type="button" title="Clear the visible analysis from this page">Clear Analysis</button>
+      </div>
+      <section id="askPanel" class="panel ask-panel locked">
+        <h2>Ask your reviews Anything</h2>
+        <p>This answers only from the CSV you uploaded or the links you scraped in this session.</p>
+        <form id="askForm" class="ask-form">
+          <input id="askInput" type="text" placeholder="Upload a CSV or scrape links to ask questions about those reviews" autocomplete="off" disabled>
+          <button class="primary" id="askButton" type="submit" disabled>Ask</button>
+        </form>
+        <div id="askLockNote" class="ask-lock-note">Upload a CSV or scrape links to unlock review-specific Q&A.</div>
+        <div id="askAnswer" class="ask-answer"></div>
+      </section>
+      <section id="content" class="empty">
+        <strong>Ready to analyze reviews.</strong>
+        Load the current Spotify analysis or upload a CSV to test the workflow.
+      </section>
+    </main>
+
+    <script>
+      const content = document.getElementById("content");
+      const message = document.getElementById("message");
+      const actionsBar = document.getElementById("actionsBar");
+      const fileInput = document.getElementById("file");
+      const linksInput = document.getElementById("linksInput");
+      const sourceStatus = document.getElementById("sourceStatus");
+      const sourceStatusRows = document.getElementById("sourceStatusRows");
+      const askPanel = document.getElementById("askPanel");
+      const askForm = document.getElementById("askForm");
+      const askInput = document.getElementById("askInput");
+      const askButton = document.getElementById("askButton");
+      const askLockNote = document.getElementById("askLockNote");
+      const askAnswer = document.getElementById("askAnswer");
+      const themeToggle = document.getElementById("themeToggle");
+      const themeIcon = document.getElementById("themeIcon");
+      const themeLabel = document.getElementById("themeLabel");
+      const emptyState = `
+        <strong>Ready to analyze reviews.</strong>
+        Load the current Spotify analysis or upload a CSV to test the workflow.
+      `;
+
+      const themeIcons = {
+        light: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="M4.93 4.93l1.41 1.41"></path><path d="M17.66 17.66l1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="M4.93 19.07l1.41-1.41"></path><path d="M17.66 6.34l1.41-1.41"></path></svg>`,
+        dark: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"></path></svg>`
+      };
+
+      function applyTheme(theme) {
+        document.body.dataset.theme = theme;
+        localStorage.setItem("reviewDiscoveryTheme", theme);
+        const next = theme === "dark" ? "Light" : "Dark";
+        themeLabel.textContent = next;
+        themeIcon.innerHTML = theme === "dark" ? themeIcons.light : themeIcons.dark;
+        themeToggle.setAttribute("aria-label", `Switch to ${next.toLowerCase()} theme`);
+      }
+
+      function initTheme() {
+        const saved = localStorage.getItem("reviewDiscoveryTheme");
+        const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        applyTheme(saved || (prefersDark ? "dark" : "light"));
+      }
+
+      function pct(value) {
+        return `${Math.round((value || 0) * 100)}%`;
+      }
+
+      function escapeHtml(value) {
+        return String(value ?? "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      function rows(items, columns) {
+        return items.map((item) => `<tr>${columns.map((col) => `<td>${col(item)}</td>`).join("")}</tr>`).join("");
+      }
+
+      function icon(name) {
+        const icons = {
+          records: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"></path><path d="M14 3v5h5"></path><path d="M10 12h6"></path><path d="M10 16h6"></path></svg>`,
+          theme: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3"></path><path d="M12 18v3"></path><path d="M4.2 7.5l2.6 1.5"></path><path d="M17.2 15l2.6 1.5"></path><path d="M4.2 16.5l2.6-1.5"></path><path d="M17.2 9l2.6-1.5"></path><circle cx="12" cy="12" r="4"></circle></svg>`,
+          segment: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11a4 4 0 1 0-8 0"></path><path d="M4 21a8 8 0 0 1 16 0"></path><path d="M17 5a3 3 0 0 1 3 3"></path><path d="M7 5a3 3 0 0 0-3 3"></path></svg>`,
+          score: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="M8 16v-4"></path><path d="M12 16V8"></path><path d="M16 16v-6"></path><path d="M20 6l-4 4-3-3-5 5"></path></svg>`
+        };
+        return `<span class="metric-icon">${icons[name] || icons.records}</span>`;
+      }
+
+      function miniRows(items) {
+        return items.map((item) => `
+          <div class="mini-row">
+            <div>
+              <strong>${escapeHtml(item.label)}</strong>
+              <div class="bar"><span style="width: ${Math.min(100, Math.round((item.share || 0) * 100))}%"></span></div>
+            </div>
+            <strong>${pct(item.share)}</strong>
+          </div>
+        `).join("");
+      }
+
+      function sentimentChip(data) {
+        const label = data.sentiment?.label || "Mixed";
+        const tone = label.toLowerCase();
+        const safeTone = ["positive", "negative", "mixed"].includes(tone) ? tone : "mixed";
+        return `<span class="sentiment-chip ${safeTone}">Sentiment: ${escapeHtml(label)}</span>`;
+      }
+
+      function render(data) {
+        const retained = data.stats && data.stats.retained ? data.stats.retained : 0;
+        const topTheme = data.themes[0] || { label: "None", count: 0, share: 0 };
+        const segment = data.segments[1] || data.segments[0] || { label: "None", share: 0 };
+
+        content.className = "grid";
+        actionsBar.classList.add("visible");
+        content.innerHTML = `
+          <div class="panel metric-card span-3">
+            ${icon("records")}
+            <div>
+              <div class="label">Records analyzed</div>
+              <div class="metric">${retained}</div>
+            </div>
+            <div class="metric-title">High-signal discovery records</div>
+          </div>
+          <div class="panel metric-card span-3">
+            ${icon("theme")}
+            <div>
+              <div class="label">Top theme</div>
+              <div class="metric">${topTheme.count}</div>
+            </div>
+            <div class="metric-title">${escapeHtml(topTheme.label)}</div>
+          </div>
+          <div class="panel metric-card span-3">
+            ${icon("segment")}
+            <div>
+              <div class="label">Top segment</div>
+              <div class="metric">${pct(segment.share)}</div>
+            </div>
+            <div class="metric-title">${escapeHtml(segment.label)}</div>
+          </div>
+          <div class="panel metric-card span-3">
+            ${icon("score")}
+            <div>
+              <div class="label">Best opportunity</div>
+              <div class="metric">${data.opportunities[0]?.score || 0}</div>
+            </div>
+            <div class="metric-title">${escapeHtml(data.opportunities[0]?.insight || "None")}</div>
+          </div>
+
+          <div class="panel span-8">
+            <div class="section-title"><h2>Top Findings</h2>${sentimentChip(data)}</div>
+            <ul class="list">${data.findings.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+          </div>
+          <div class="panel span-4">
+            <div class="section-title"><h2>User Segments</h2>${sentimentChip(data)}</div>
+            <div class="mini-list">${miniRows(data.segments)}</div>
+          </div>
+
+          <div class="panel span-6">
+            <div class="section-title"><h2>Theme Extraction</h2>${sentimentChip(data)}</div>
+            <table>
+              <thead><tr><th>Theme</th><th>Mentions</th><th>Share</th></tr></thead>
+              <tbody>${rows(data.themes, [i => escapeHtml(i.label), i => i.count, i => pct(i.share)])}</tbody>
+            </table>
+          </div>
+          <div class="panel span-6">
+            <div class="section-title"><h2>User Intents</h2></div>
+            <table>
+              <thead><tr><th>Intent</th><th>Mentions</th></tr></thead>
+              <tbody>${rows(data.intents, [i => escapeHtml(i.label), i => i.count])}</tbody>
+            </table>
+          </div>
+
+          <div class="panel wide">
+            <div class="section-title"><h2>Opportunity Prioritization</h2><span class="tag">Frequency x Pain x Impact</span></div>
+            <table>
+              <thead><tr><th>Insight</th><th>Evidence</th><th>Score</th><th>Recommendation</th></tr></thead>
+              <tbody>${rows(data.opportunities, [
+                i => `<strong>${escapeHtml(i.insight)}</strong>`,
+                i => escapeHtml(i.evidence),
+                i => `<span class="score">${i.score}</span>`,
+                i => escapeHtml(i.recommendation)
+              ])}</tbody>
+            </table>
+          </div>
+
+          <div class="panel wide">
+            <div class="section-title"><h2>MVP Ideas</h2>${sentimentChip(data)}</div>
+            <ul class="list">${data.mvp_ideas.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+          </div>
+        `;
+      }
+
+      function renderSourceStatus(statuses = []) {
+        if (!statuses.length) {
+          sourceStatus.classList.remove("visible");
+          sourceStatusRows.innerHTML = "";
+          return;
+        }
+        sourceStatus.classList.add("visible");
+        sourceStatusRows.innerHTML = statuses.map((item) => `
+          <div class="status-row">
+            <strong>${escapeHtml(item.source)}</strong>
+            <span class="status-pill">${Number(item.records_collected || 0)}</span>
+            <span>${escapeHtml(item.status || "")}</span>
+          </div>
+        `).join("");
+      }
+
+      function setAskAvailable(available) {
+        askPanel.classList.toggle("locked", !available);
+        askInput.disabled = !available;
+        askButton.disabled = !available;
+        askInput.placeholder = available
+          ? "Ask about themes, user pain, repeated listening, segments, or unmet needs"
+          : "Upload a CSV or scrape links to ask questions about those reviews";
+        askLockNote.textContent = available
+          ? "Q&A is now using only your latest uploaded or scraped dataset."
+          : "Upload a CSV or scrape links to unlock review-specific Q&A.";
+        if (!available) {
+          askInput.value = "";
+          askAnswer.classList.remove("visible");
+          askAnswer.innerHTML = "";
+        }
+      }
+
+      function setMessage(text, busy = false) {
+        message.classList.toggle("investigating", busy);
+        message.innerHTML = busy ? `
+          <div class="detective-card" role="status" aria-live="polite">
+            <div class="detective-lens" aria-hidden="true"></div>
+            <div class="detective-copy">
+              <strong>${escapeHtml(text)}<span class="clue-dots" aria-hidden="true"><i></i><i></i><i></i></span></strong>
+              <span>Checking review clues, matching recurring patterns, and building the product insight case file.</span>
+              <div class="detective-progress" aria-hidden="true"></div>
+            </div>
+          </div>
+        ` : escapeHtml(text);
+      }
+
+      function clearAnalysis() {
+        content.className = "empty";
+        content.innerHTML = emptyState;
+        actionsBar.classList.remove("visible");
+        setAskAvailable(false);
+        renderSourceStatus([]);
+        fileInput.value = "";
+        linksInput.value = "";
+        setMessage("Analysis cleared. Load the current dataset or upload a CSV to start again.");
+      }
+
+      async function loadCurrent() {
+        setMessage("Loading current analysis...", true);
+        const response = await fetch("/api/current");
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || "Unable to load current analysis.");
+        render(data);
+        setAskAvailable(false);
+        setMessage("Loaded current Spotify analysis.");
+      }
+
+      document.getElementById("loadCurrent").addEventListener("click", () => {
+        loadCurrent().catch((error) => { setMessage(error.message); });
+      });
+
+      document.getElementById("clearAnalysis").addEventListener("click", clearAnalysis);
+      themeToggle.addEventListener("click", () => {
+        applyTheme(document.body.dataset.theme === "dark" ? "light" : "dark");
+      });
+      initTheme();
+
+      document.getElementById("uploadForm").addEventListener("submit", async (event) => {
+        event.preventDefault();
+        setMessage("Analyzing uploaded CSV...", true);
+        const formData = new FormData(event.currentTarget);
+        try {
+          const response = await fetch("/api/analyze", { method: "POST", body: formData });
+          const data = await response.json();
+          if (!response.ok) throw new Error(data.error || "Upload analysis failed.");
+          render(data);
+          renderSourceStatus([]);
+          setAskAvailable(true);
+          setMessage("Uploaded CSV analyzed.");
+        } catch (error) {
+          setMessage(error.message);
+        }
+      });
+
+      document.getElementById("linkForm").addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const links = linksInput.value.trim();
+        if (!links) {
+          setMessage("Paste at least one link to scrape.");
+          return;
+        }
+        setMessage("Investigating pasted links...", true);
+        try {
+          const response = await fetch("/api/collect", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ links })
+          });
+          const data = await response.json();
+          renderSourceStatus(data.source_status || []);
+          if (!response.ok) throw new Error(data.error || "Link scraping failed.");
+          render(data);
+          setAskAvailable(true);
+          setMessage("Pasted links scraped and analyzed.");
+        } catch (error) {
+          setMessage(error.message);
+        }
+      });
+
+      askForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const question = askInput.value.trim();
+        if (!question) return;
+        askAnswer.classList.add("visible");
+        askAnswer.innerHTML = "<strong>Looking through uploaded reviews...</strong>";
+        try {
+          const response = await fetch("/api/ask", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ question })
+          });
+          const data = await response.json();
+          if (!response.ok) throw new Error(data.error || "Unable to answer.");
+          const evidence = (data.evidence || []).map((item) => `
+            <div class="evidence-item"><strong>${escapeHtml(item.source)}</strong>: ${escapeHtml(item.text)}</div>
+          `).join("");
+          askAnswer.innerHTML = `
+            <strong>Answer from uploaded CSV</strong>
+            <p>${escapeHtml(data.answer)}</p>
+            <div class="evidence-list">${evidence}</div>
+          `;
+        } catch (error) {
+          askAnswer.innerHTML = `<strong>Answer unavailable</strong><p>${escapeHtml(error.message)}</p>`;
+        }
+      });
+    </script>
+  </body>
+</html>

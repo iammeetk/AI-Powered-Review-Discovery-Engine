@@ -1,0 +1,4652 @@
+{
+  "data_sources_used": [
+    {
+      "source": "App Store",
+      "records": 78
+    },
+    {
+      "source": "Play Store",
+      "records": 46
+    },
+    {
+      "source": "Reddit",
+      "records": 42
+    },
+    {
+      "source": "Spotify Community",
+      "records": 17
+    }
+  ],
+  "cleaning_stats": {
+    "loaded": 1061,
+    "dropped_low_signal_discovery": 161,
+    "dropped_not_discovery_related": 607,
+    "dropped_non_english": 110,
+    "retained": 183
+  },
+  "sentiment_distribution": [
+    {
+      "label": "mixed",
+      "count": 101,
+      "share": 0.552
+    },
+    {
+      "label": "positive",
+      "count": 47,
+      "share": 0.257
+    },
+    {
+      "label": "negative",
+      "count": 35,
+      "share": 0.191
+    }
+  ],
+  "theme_distribution": [
+    {
+      "label": "Search and browse friction",
+      "count": 134,
+      "share": 0.732
+    },
+    {
+      "label": "Repetitive recommendations",
+      "count": 49,
+      "share": 0.268
+    },
+    {
+      "label": "Low novelty in discovery surfaces",
+      "count": 43,
+      "share": 0.235
+    },
+    {
+      "label": "Weak context or mood understanding",
+      "count": 23,
+      "share": 0.126
+    },
+    {
+      "label": "Collaborative discovery gaps",
+      "count": 15,
+      "share": 0.082
+    },
+    {
+      "label": "Library history overpowers exploration",
+      "count": 15,
+      "share": 0.082
+    },
+    {
+      "label": "Mainstream or popularity bias",
+      "count": 10,
+      "share": 0.055
+    },
+    {
+      "label": "Insufficient recommendation controls",
+      "count": 8,
+      "share": 0.044
+    }
+  ],
+  "intent_distribution": [
+    {
+      "label": "Find a specific song or artist",
+      "count": 163,
+      "share": 0.891
+    },
+    {
+      "label": "Refresh stale recommendations",
+      "count": 46,
+      "share": 0.251
+    },
+    {
+      "label": "Find genuinely new music",
+      "count": 23,
+      "share": 0.126
+    },
+    {
+      "label": "Match listening context",
+      "count": 14,
+      "share": 0.077
+    },
+    {
+      "label": "Understand algorithm behavior",
+      "count": 12,
+      "share": 0.066
+    },
+    {
+      "label": "Explore niche or long-tail artists",
+      "count": 12,
+      "share": 0.066
+    },
+    {
+      "label": "Discover socially",
+      "count": 11,
+      "share": 0.06
+    },
+    {
+      "label": "Control the recommendation model",
+      "count": 8,
+      "share": 0.044
+    },
+    {
+      "label": "Improve music discovery",
+      "count": 3,
+      "share": 0.016
+    }
+  ],
+  "user_segments": [
+    {
+      "label": "General Spotify listeners",
+      "count": 83,
+      "share": 0.454
+    },
+    {
+      "label": "Active explorers",
+      "count": 45,
+      "share": 0.246
+    },
+    {
+      "label": "Comfort-loop listeners",
+      "count": 39,
+      "share": 0.213
+    },
+    {
+      "label": "Mood and context curators",
+      "count": 14,
+      "share": 0.077
+    },
+    {
+      "label": "Niche and long-tail fans",
+      "count": 12,
+      "share": 0.066
+    },
+    {
+      "label": "Social discovery users",
+      "count": 11,
+      "share": 0.06
+    },
+    {
+      "label": "Control seekers",
+      "count": 8,
+      "share": 0.044
+    }
+  ],
+  "insight_clusters": [
+    {
+      "theme": "Search and browse friction",
+      "count": 134,
+      "share": 0.732,
+      "summary": "Known-item search works better than open-ended browsing or genre exploration.",
+      "representative_feedback": [
+        {
+          "source": "Play Store",
+          "text": "why is it all of a sudden there are issues with the platform. today I can click on any Playlist ... akd as soon as that song is done it changes to a COMPLETELY different style of music. and ill go back to the playlist puk another song and again when its done it changes to something else"
+        },
+        {
+          "source": "Play Store",
+          "text": "Could you please make it optional to have f. mandatory Ai transcriptions in podcasts? Sometimes you want to see the pictures, cover art, whatever. Not useless Ai transcriptions. If it's for helping the disabled, then make it optional... Why is everything logical so incredibly hard for your app. Same with the new widget. The one before worked. Now you replaced it with one that disconnects constantly and suggests Playlists. If I wanted to listen to a different Playlist I'd open the app."
+        }
+      ]
+    },
+    {
+      "theme": "Repetitive recommendations",
+      "count": 49,
+      "share": 0.268,
+      "summary": "Users perceive discovery products as recycling a narrow track and artist set.",
+      "representative_feedback": [
+        {
+          "source": "Play Store",
+          "text": "why is it all of a sudden there are issues with the platform. today I can click on any Playlist ... akd as soon as that song is done it changes to a COMPLETELY different style of music. and ill go back to the playlist puk another song and again when its done it changes to something else"
+        },
+        {
+          "source": "Play Store",
+          "text": "Absolute trash. New widget broke the already broken app more. Recommendations are always yhe exact same song (regardless of what you're listening to), the shuffle works the same way (only plays the same couple soungs). Its a free app for me and I still would rather listen to music on YouTube with commercials"
+        }
+      ]
+    },
+    {
+      "theme": "Low novelty in discovery surfaces",
+      "count": 43,
+      "share": 0.235,
+      "summary": "Discovery is valued, but users do not feel enough genuinely unfamiliar music appears.",
+      "representative_feedback": [
+        {
+          "source": "Play Store",
+          "text": "HATE THE NEW WIDGET!!! Bring back the regular now playing widget, at least give us the option!!! I don't want suggestions, I just want a *simple* now-playing widget."
+        },
+        {
+          "source": "Play Store",
+          "text": "Absolute trash. New widget broke the already broken app more. Recommendations are always yhe exact same song (regardless of what you're listening to), the shuffle works the same way (only plays the same couple soungs). Its a free app for me and I still would rather listen to music on YouTube with commercials"
+        }
+      ]
+    },
+    {
+      "theme": "Weak context or mood understanding",
+      "count": 23,
+      "share": 0.126,
+      "summary": "The model blends contexts that users expect to keep separate.",
+      "representative_feedback": [
+        {
+          "source": "Play Store",
+          "text": "why is it all of a sudden there are issues with the platform. today I can click on any Playlist ... akd as soon as that song is done it changes to a COMPLETELY different style of music. and ill go back to the playlist puk another song and again when its done it changes to something else"
+        },
+        {
+          "source": "Play Store",
+          "text": "Spotify continues to dominate as the ultimate music and audio platform in 2026. Whether I’m discovering new artists, building playlists for every mood, listening to podcasts, or enjoying audiobooks, it delivers an unbeatable personalized experience that keeps me coming back every day."
+        }
+      ]
+    },
+    {
+      "theme": "Collaborative discovery gaps",
+      "count": 15,
+      "share": 0.082,
+      "summary": "Social surfaces compare existing libraries more than helping groups discover together.",
+      "representative_feedback": [
+        {
+          "source": "Play Store",
+          "text": "This is edited from my original rant of the ad problem on Spotify and it's so much worse, now you get an Ad every single time you OPEN THE APP. Basically every song is ad on ad on ad and I don't seem to even get 15+ minute ad breaks anymore. It's as if you can't listen to music without purchasing Premium which is such a let down compared to older Spotify, even a couple years ago it wasn't as much of a major problem. Disappointing."
+        },
+        {
+          "source": "Play Store",
+          "text": "it's like the bestest ever app of all time I would have given 5 as a rating but the problem is the ads they pop up after every 3 to 4 songs. It's still nice as we can also blend our playlists with our friends and family. and also every song you need can be found here overall i think 💬🤔 it's an amazing app especially for music listeners like me ."
+        }
+      ]
+    },
+    {
+      "theme": "Library history overpowers exploration",
+      "count": 15,
+      "share": 0.082,
+      "summary": "Past listening history can dominate current exploration intent.",
+      "representative_feedback": [
+        {
+          "source": "Play Store",
+          "text": "Spotify has completely elevated my music experience! The sound quality is superb, the playlist recommendations are incredibly accurate, and discovering new artists through Discover Weekly feels like magic. I also love the podcast library — everything is in one place. Spotify Premium is 100% worth it for offline listening and zero interruptions"
+        },
+        {
+          "source": "Play Store",
+          "text": "as of this week 3 songs I saved have been changed to different versions or removed why pay for subscription when songs u want aren't available it changed them on my list and the other 2 it removed. keeps removing songs or changing them to something else"
+        }
+      ]
+    },
+    {
+      "theme": "Mainstream or popularity bias",
+      "count": 10,
+      "share": 0.055,
+      "summary": "Long-tail and niche discovery are crowded out by broad or promoted content.",
+      "representative_feedback": [
+        {
+          "source": "App Store",
+          "text": "when your shuffling system clearly favors tiktok popular songs to the point of the same 20 songs always being at the top of the mix, and never seeing certain songs above the half way point, you shouldnt call it “shuffle”. call it “tiktok trending radio” 😒"
+        },
+        {
+          "source": "App Store",
+          "text": "I’ve been a subscriber for many years\nI started when the subscription cost $10. But lately, the clunky menu has just been getting on my nerves. And the recommendations are absolutely terrible. The suggestions are the same tracks I listened to 5 years ago. Why can’t you just create a separate “New for You” playlist?\nOn top of that, they raise the subscription price every year even though the quality of the service is going downhill! A lot of popular tracks are just missing! And now I have to pay $15 for this. I canceled my subscription, but they’ve figured out a way so that in the free version despite tons of ads I simply can’t listen to my own tracks… what a terrible service."
+        }
+      ]
+    },
+    {
+      "theme": "Insufficient recommendation controls",
+      "count": 8,
+      "share": 0.044,
+      "summary": "Users want clearer ways to steer, reset, or understand the recommendation system.",
+      "representative_feedback": [
+        {
+          "source": "Play Store",
+          "text": "Old widget was better.... A good app, I have premium so I don't have to listen to the obnoxious ads anymore thank god. Better than Google Play or iTunes. I wish I could reset my listening preferences though to start from scratch or choose not affect preferences when I choose. Also, an option to toggle \"play or add to queue\" on tapping a song would be nice because I always accidentally change songs when I'm trying to add queue."
+        },
+        {
+          "source": "App Store",
+          "text": "I don’t understand why we still have this disco ball as the apps logo. It’s freaking hideous and an awful way to celebrate your anniversary or whatever the case. \n\nI’m honestly about to cancel my subscription, and switch back to Apple Music just so I don’t have to look at it."
+        }
+      ]
+    }
+  ],
+  "key_findings": [
+    "Search and browse friction is the largest friction area, appearing in 134 of 183 retained records.",
+    "The dominant user intent is to find a specific song or artist, indicating the product job is active exploration rather than passive playback.",
+    "Active explorers are the clearest affected segment, with needs that differ from casual listeners.",
+    "Sentiment is mostly unresolved: 74% of feedback is negative or mixed.",
+    "Users often describe a control gap: they can skip or hide content, but do not trust that Spotify understands the reason.",
+    "Repeated listening is usually caused by history overpowering momentary intent, not by a lack of interest in discovery."
+  ],
+  "opportunities": [
+    {
+      "opportunity": "Familiar-to-fresh control",
+      "why": "A visible control would let users choose comfort listening or exploration without training the whole account incorrectly.",
+      "signals": "Repetitive recommendations, Low novelty in discovery surfaces, Library history overpowers exploration"
+    },
+    {
+      "opportunity": "Recommendation feedback with reason codes",
+      "why": "Users need hide/dislike/reset actions that communicate whether the issue is artist, song, mood, popularity, or repetition.",
+      "signals": "Insufficient recommendation controls, Weak context or mood understanding"
+    },
+    {
+      "opportunity": "Exploration mode for niche and adjacent artists",
+      "why": "A mode that dampens mainstream popularity and library history can serve users seeking smaller releases or adjacent genres.",
+      "signals": "Niche and long-tail fans, Active explorers"
+    },
+    {
+      "opportunity": "Context-aware discovery surfaces",
+      "why": "Separate work, gym, night, social, and nostalgia contexts so discovery does not collapse into a single profile.",
+      "signals": "Weak context or mood understanding, Collaborative discovery gaps"
+    }
+  ],
+  "representative_feedback": [
+    {
+      "theme": "Search and browse friction",
+      "source": "Play Store",
+      "text": "why is it all of a sudden there are issues with the platform. today I can click on any Playlist ... akd as soon as that song is done it changes to a COMPLETELY different style of music. and ill go back to the playlist puk another song and again when its done it changes to something else"
+    },
+    {
+      "theme": "Search and browse friction",
+      "source": "Play Store",
+      "text": "Could you please make it optional to have f. mandatory Ai transcriptions in podcasts? Sometimes you want to see the pictures, cover art, whatever. Not useless Ai transcriptions. If it's for helping the disabled, then make it optional... Why is everything logical so incredibly hard for your app. Same with the new widget. The one before worked. Now you replaced it with one that disconnects constantly and suggests Playlists. If I wanted to listen to a different Playlist I'd open the app."
+    },
+    {
+      "theme": "Repetitive recommendations",
+      "source": "Play Store",
+      "text": "why is it all of a sudden there are issues with the platform. today I can click on any Playlist ... akd as soon as that song is done it changes to a COMPLETELY different style of music. and ill go back to the playlist puk another song and again when its done it changes to something else"
+    },
+    {
+      "theme": "Repetitive recommendations",
+      "source": "Play Store",
+      "text": "Absolute trash. New widget broke the already broken app more. Recommendations are always yhe exact same song (regardless of what you're listening to), the shuffle works the same way (only plays the same couple soungs). Its a free app for me and I still would rather listen to music on YouTube with commercials"
+    },
+    {
+      "theme": "Low novelty in discovery surfaces",
+      "source": "Play Store",
+      "text": "HATE THE NEW WIDGET!!! Bring back the regular now playing widget, at least give us the option!!! I don't want suggestions, I just want a *simple* now-playing widget."
+    },
+    {
+      "theme": "Low novelty in discovery surfaces",
+      "source": "Play Store",
+      "text": "Absolute trash. New widget broke the already broken app more. Recommendations are always yhe exact same song (regardless of what you're listening to), the shuffle works the same way (only plays the same couple soungs). Its a free app for me and I still would rather listen to music on YouTube with commercials"
+    },
+    {
+      "theme": "Weak context or mood understanding",
+      "source": "Play Store",
+      "text": "why is it all of a sudden there are issues with the platform. today I can click on any Playlist ... akd as soon as that song is done it changes to a COMPLETELY different style of music. and ill go back to the playlist puk another song and again when its done it changes to something else"
+    },
+    {
+      "theme": "Weak context or mood understanding",
+      "source": "Play Store",
+      "text": "Spotify continues to dominate as the ultimate music and audio platform in 2026. Whether I’m discovering new artists, building playlists for every mood, listening to podcasts, or enjoying audiobooks, it delivers an unbeatable personalized experience that keeps me coming back every day."
+    }
+  ],
+  "records": [
+    {
+      "source": "Play Store",
+      "id": "cb489198-9efa-4bd9-9f11-aba41adc12fc",
+      "date": "2026-06-17",
+      "text": "This is edited from my original rant of the ad problem on Spotify and it's so much worse, now you get an Ad every single time you OPEN THE APP. Basically every song is ad on ad on ad and I don't seem to even get 15+ minute ad breaks anymore. It's as if you can't listen to music without purchasing Premium which is such a let down compared to older Spotify, even a couple years ago it wasn't as much of a major problem. Disappointing.",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -2.4,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Collaborative discovery gaps"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "9a22d2d2-2945-419d-84d5-251490e3f53b",
+      "date": "2026-06-17",
+      "text": "HATE THE NEW WIDGET!!! Bring back the regular now playing widget, at least give us the option!!! I don't want suggestions, I just want a *simple* now-playing widget.",
+      "rating": "1",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.6,
+        "positive_terms": 2,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces"
+      ],
+      "intents": [
+        "Improve music discovery"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "fd67ae35-1bc5-4010-ba59-459571a671f7",
+      "date": "2026-06-17",
+      "text": "why is it all of a sudden there are issues with the platform. today I can click on any Playlist ... akd as soon as that song is done it changes to a COMPLETELY different style of music. and ill go back to the playlist puk another song and again when its done it changes to something else",
+      "rating": "2",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.7,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Weak context or mood understanding",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Understand algorithm behavior",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "c12d9f6e-658f-4d17-af45-39ad27b6abdf",
+      "date": "2026-06-17",
+      "text": "Absolute trash. New widget broke the already broken app more. Recommendations are always yhe exact same song (regardless of what you're listening to), the shuffle works the same way (only plays the same couple soungs). Its a free app for me and I still would rather listen to music on YouTube with commercials",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -4.4,
+        "positive_terms": 0,
+        "negative_terms": 3
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Low novelty in discovery surfaces"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners",
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "e95fa6f6-9ed1-4229-b006-8ecd71e46187",
+      "date": "2026-06-17",
+      "text": "so unfair limit 6 skip per hour and there is limit to listen new music, so baddd",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces"
+      ],
+      "intents": [
+        "Find genuinely new music"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "2ab4584f-b6b6-4725-bb8e-1e75cc2a17ab",
+      "date": "2026-06-17",
+      "text": "let me know when the small widget shows the play and skip buttons again. I can't fathom why you would remove them just to make the widget absolutely useless.",
+      "rating": "2",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.7,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Understand algorithm behavior"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "eb205def-70e4-4321-840a-8ecf0feefe6e",
+      "date": "2026-06-17",
+      "text": "Could you please make it optional to have f. mandatory Ai transcriptions in podcasts? Sometimes you want to see the pictures, cover art, whatever. Not useless Ai transcriptions. If it's for helping the disabled, then make it optional... Why is everything logical so incredibly hard for your app. Same with the new widget. The one before worked. Now you replaced it with one that disconnects constantly and suggests Playlists. If I wanted to listen to a different Playlist I'd open the app.",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -2.4,
+        "positive_terms": 1,
+        "negative_terms": 2
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Understand algorithm behavior",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "517351f4-0eee-4a25-bef9-34e02501f191",
+      "date": "2026-06-17",
+      "text": "shuffle system is broken, plays same song again. ps I'm a premium user.",
+      "rating": "4",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.3,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "50e71397-ffc4-4b72-8dfb-8b403b18f820",
+      "date": "2026-06-17",
+      "text": "It's Shuffled When Find A Playlist Also If There Hearing This Please Let Me Have No Shuffled",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "eb4f875f-1039-42f6-9f16-07588a5a76dc",
+      "date": "2026-06-17",
+      "text": "This App is Now Trash And Not Recommended unless you have premium if you are using free version then this app puts Ads every song and u can't change/skip song you want",
+      "rating": "1",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "bb452183-1ddc-467b-8966-93575a205496",
+      "date": "2026-06-17",
+      "text": "Spotify has completely elevated my music experience! The sound quality is superb, the playlist recommendations are incredibly accurate, and discovering new artists through Discover Weekly feels like magic. I also love the podcast library — everything is in one place. Spotify Premium is 100% worth it for offline listening and zero interruptions",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Library history overpowers exploration",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "a82c9877-a97d-4a71-b51b-4fc7126a4924",
+      "date": "2026-06-17",
+      "text": "Continuity between devices is terrible, playlists often start over at specific point when switching from my computer to my car, for example. Also, new widget is ugly af and frequently unresponsive. It's a shame they forced everyone to stop using the old one.",
+      "rating": "3",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "12ab316c-a4c3-4ccd-9d8c-cce504f6eaec",
+      "date": "2026-06-17",
+      "text": "as of this week 3 songs I saved have been changed to different versions or removed why pay for subscription when songs u want aren't available it changed them on my list and the other 2 it removed. keeps removing songs or changing them to something else",
+      "rating": "1",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Library history overpowers exploration"
+      ],
+      "intents": [
+        "Understand algorithm behavior",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "bfd20e43-c1d8-43ed-87bf-e893c2d77e64",
+      "date": "2026-06-17",
+      "text": "Every single time I search a song and try to play it EVERYTHING EXCEPT THE SONG PLAYS. The issue above has not been fixed, and now i have come across another issue,,, The widget. i have had the 4x1 widget on my homescreen for forever. It fit well with the space i had on it and worked well. Guess what? Now its functionally useless in favor of the 4x2 widget. Why??? Now i have to get rid of the widget and i cant use the 4x2 because IT DOES NOT FIT! i dont see why we cant just have both.",
+      "rating": "2",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.7,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Understand algorithm behavior",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "684d1ef8-3493-4a85-8dc9-8ed2f515f7f7",
+      "date": "2026-06-17",
+      "text": "it's like the bestest ever app of all time I would have given 5 as a rating but the problem is the ads they pop up after every 3 to 4 songs. It's still nice as we can also blend our playlists with our friends and family. and also every song you need can be found here overall i think 💬🤔 it's an amazing app especially for music listeners like me .",
+      "rating": "4",
+      "sentiment": {
+        "label": "positive",
+        "score": 1.7,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction",
+        "Collaborative discovery gaps"
+      ],
+      "intents": [
+        "Discover socially",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Social discovery users"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "42827ecb-4af3-41b3-9d71-b38a632e6341",
+      "date": "2026-06-17",
+      "text": "loving that I can make my own playlist and that automatically creates options for more artists and new songs as well as old ones..",
+      "rating": "5",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "9003f7e1-91fd-4b64-a1c0-62492d5693bf",
+      "date": "2026-06-17",
+      "text": "(New review for review update) went to the spotify support website, ai was useless, still having the same glitches: what is have tried: -reinstalling -clearing data -clearing catche -updating the app but nothing worked audio glitches are still there so the spotify support website did not help cam you either fix your app or fix this unfixable bug and also the audio keeps glitching like 1 second of a different part of the song in a different bit such as glitching sounds happening.",
+      "rating": "3",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.0,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "41b6f6e0-e8c3-45eb-ad48-9f185ad76f0c",
+      "date": "2026-06-17",
+      "text": "too much ads and I can't even choose the songs I want after a specific amount, gotta wait till the next day. same for the skips, I get a specific amount of skips in an hour. it's torture",
+      "rating": "2",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.7,
+        "positive_terms": 1,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "ca2dc315-9d20-4436-a7f8-56e585ede92a",
+      "date": "2026-06-17",
+      "text": "The audio quality and UI of this music app are fantastic, but the ad frequency makes it really hard to enjoy. Getting multiple unskippable ads every two or three songs completely breaks the flow of a playlist. I totally understand needing ads for the free tier, but right now it feels like you're forced into premium just to listen to a single album. Hopefully, the devs can balance the ad timing better!",
+      "rating": "4",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.7,
+        "positive_terms": 1,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "a35d1f56-ffc7-45a3-80fc-7b874b8b1928",
+      "date": "2026-06-17",
+      "text": "ads are fine but no shuffle feature should be there in non-premium accounts also",
+      "rating": "4",
+      "sentiment": {
+        "label": "positive",
+        "score": 1.7,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "81533973-c010-47b7-aac6-b003f9e3b5f2",
+      "date": "2026-06-17",
+      "text": "The app continues to be glitchy, I can't open artists when I search them or it often tells me 'Spotify is offline' even when I have internet or data. The menu also frequently fails to pop up when I try to add a song to a playlist. And as far as suggested music goes, it often regurgitates back the same things I already listen to rather than finding new artists similar to what I like.",
+      "rating": "3",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.0,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Low novelty in discovery surfaces",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners",
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "a57b0902-8bc6-4b00-aca0-d4b58c9d8bbf",
+      "date": "2026-06-17",
+      "text": "when the premium ended they shuffled my Playlist for no reason it happens to me every time",
+      "rating": "2",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.7,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "a80f14c8-cc0f-4784-8d51-47a196365ee4",
+      "date": "2026-06-17",
+      "text": "They have removed smart shuffle at least. Now they have changed the widget, I don't understand removing support for the old simple widget. I don't need to see other options on the widget just play/pause next and back.",
+      "rating": "1",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "990357ef-0643-4af4-9ef5-13b45651db5a",
+      "date": "2026-06-17",
+      "text": "You have to listen on shuffle if you dont have premium, and it used to shuffle normally but now \"smart\" shuffle (where the app plays songs that aren't part of the playlist/album/artist based on similarity) is the only option. Also, ad frequency is too high. Not only that but it's always 2 ads in a row now, never just 1. Feature suggestion: The option to play two or more playlists on shuffle at the same time.",
+      "rating": "3",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.0,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Low novelty in discovery surfaces",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "04474202-bca6-4a2d-bfef-a8e0dadd5b20",
+      "date": "2026-06-17",
+      "text": "besides the fact that Spotify works with ICE. Did they remove the \"Local Files\" Playlist? i have music downloaded on my phone Playlist and it used to play on Spotify, just recently I noticed they removed it. is this a glitch or did they permanently remove the \"local files\" Playlist?",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "2d1dac74-2b21-48dc-9ce0-3d776ec36fb3",
+      "date": "2026-06-17",
+      "text": "Best music app for listening to music u like or love.Also great for discovering new music as well",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 3.4,
+        "positive_terms": 2,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces"
+      ],
+      "intents": [
+        "Find genuinely new music"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "8febaaae-f500-4c1f-81b4-4646b5cf1002",
+      "date": "2026-06-17",
+      "text": "Please Spotify team, add a setting that ask for another confirmation on whether I want to remove a song from any library or Playlist. You can also add the ability to position our songs anywhere and in any order in Liked Songs (just like in Queue)",
+      "rating": "4",
+      "sentiment": {
+        "label": "positive",
+        "score": 1.7,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Library history overpowers exploration",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "6373bef8-9ded-4d72-b892-51b8b4f7ac9f",
+      "date": "2026-06-17",
+      "text": "Spotify is fine but I am stuck with it as I have a family plan that others rely on. Would be great if there was safe playlists excluded from metrics? (for the kids music). new music for me should not include reissues. Spotify also tries to recommend new music that is so far outside of what I generally listen to, I get frustrated by it. needs to deal better with local files from my library when the artist is not on Spotify.",
+      "rating": "3",
+      "sentiment": {
+        "label": "positive",
+        "score": 4.0,
+        "positive_terms": 4,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Library history overpowers exploration",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "200c501d-2f0c-4892-9882-e1262e6a0c04",
+      "date": "2026-06-17",
+      "text": "i pay for the subscription and not only do i still have the app fight me on not having shuffle on or repeat on (constantly have to check it didn't turn on by itself) and artist leaving the site, and having ads that seem completely antithetical to what they're interrupting, and now u want me to use a widget that takes up half of my phone screen when the smaller one worked fine. seems like u guys just like making things worse and worse.",
+      "rating": "2",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.7,
+        "positive_terms": 2,
+        "negative_terms": 2
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Explore niche or long-tail artists",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners",
+        "Niche and long-tail fans"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "3f340cd0-4956-43d8-aa75-ae403fbc718f",
+      "date": "2026-06-17",
+      "text": "Old widget was better.... A good app, I have premium so I don't have to listen to the obnoxious ads anymore thank god. Better than Google Play or iTunes. I wish I could reset my listening preferences though to start from scratch or choose not affect preferences when I choose. Also, an option to toggle \"play or add to queue\" on tapping a song would be nice because I always accidentally change songs when I'm trying to add queue.",
+      "rating": "4",
+      "sentiment": {
+        "label": "positive",
+        "score": 3.7,
+        "positive_terms": 3,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Insufficient recommendation controls"
+      ],
+      "intents": [
+        "Control the recommendation model",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Control seekers"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "1c8127c0-0d3d-44f0-bd3a-7b7ea30b81ac",
+      "date": "2026-06-17",
+      "text": "Spotify is by far one of the best music streaming platforms I've used. The app is easy to navigate, the sound quality is excellent, and the personalized playlists and recommendations are surprisingly accurate. I love discovering new artists through features like Discover Weekly and Daily Mixes. The huge music library, podcasts, and seamless syncing across devices make it a fantastic all-in-one entertainment platform. Spotify continues to improve its features and user experience.Highly recommend",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Library history overpowers exploration",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "268c0b8d-0102-40e9-8580-c0ab325512ee",
+      "date": "2026-06-17",
+      "text": "new update seems to have messed up the \"On repeat\" playlist. Songs I only played once messing up the list, while songs I repeat don't make the cut. please no. Edit: they fixed it! Love this feature. Also the new lyric placement? Amazing!",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "e806b6c8-6824-4a0e-8791-faaa8ccb0814",
+      "date": "2026-06-17",
+      "text": "Spotify offers an outstanding music experience with an extensive library of songs and podcasts. The personalized playlists are especially impressive.",
+      "rating": "5",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Library history overpowers exploration",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "e92d26c5-faaa-42f7-b0fa-0c86dbf8a6c5",
+      "date": "2026-06-17",
+      "text": "Can't listen to two songs in a row without getting 3 ads in a row with the exact same script. I'd understand having a few ads every so often, but this is just ridiculous.",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -2.4,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "8667f615-ce22-44d2-9a6f-3918424e80d3",
+      "date": "2026-06-17",
+      "text": "1 Song. 2 adverts. na unna buy data for me? Suggested songs out of my interest",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "6acc350b-36c4-47f0-8638-6f356ac2f4e4",
+      "date": "2026-06-17",
+      "text": "saat ini, saya sudah jarang beli spotify premium karena tidak mendapatkan tawaran 3 bulan cuma 49 ribu dan sekarang akun gratisan cuma 5 lagu aja udah dianggap overplayed🤬. dan juga tolong spotify perbaiki sistem shuffle nya juga karena shuffle nya ngebosenin atau gak sesuai sama genre lagu yang dipilih.",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "d09f36c7-a9d3-4cfe-b63a-94f3162c7a32",
+      "date": "2026-06-17",
+      "text": "Every time I close the app after listening, the next time I open it the app isn't showing ANYTHING, only my last played song. Even if I'm clicking on 'MY LIBRARY', nothings happening.. Really poor updates.",
+      "rating": "2",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.7,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Library history overpowers exploration"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "9aeef7b2-83ac-421b-ab2b-34ea98bf1416",
+      "date": "2026-06-17",
+      "text": "amazing playlist",
+      "rating": "5",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "a15a9dad-fc74-423a-80f7-6ad407de6ebd",
+      "date": "2026-06-17",
+      "text": "I love this music app, I can discover bunch and music and have fun with sharing playlist , even the cheapest premium plans is enough to stop ads interrupting my music, the only minus two star experience is that , it drains my Samsung watch 4 battery abnormally fast if I hear it from the watch even when offline , so please , optimize watch version of the app on play store, make it more battery efficient",
+      "rating": "3",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.0,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "66bbfd25-82a9-4c29-ae40-9e00ff84ded3",
+      "date": "2026-06-17",
+      "text": "Very slow and laggy UI. When quickly scrolling through playlists, FPS drops to 1-2. Changing the view oftentimes takes a full second, even when all the data is already loaded (opening an album or a song, showing lyrics etc.).",
+      "rating": "3",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "346c5323-0ea6-4dd3-82a5-2ec6e2cc1eef",
+      "date": "2026-06-17",
+      "text": "Spotify continues to dominate as the ultimate music and audio platform in 2026. Whether I’m discovering new artists, building playlists for every mood, listening to podcasts, or enjoying audiobooks, it delivers an unbeatable personalized experience that keeps me coming back every day.",
+      "rating": "5",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Weak context or mood understanding",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Match listening context",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers",
+        "Mood and context curators"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "658bd80f-c136-4d5e-bc0f-be3e5271c343",
+      "date": "2026-06-17",
+      "text": "time to time it gets updated and then so many ads and now you can't even skip the song you don't want to listen, cannot listen to the searched song so frustrating",
+      "rating": "1",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "d85a4ca8-5717-4353-a485-9a3f85e36f4b",
+      "date": "2026-06-17",
+      "text": "Always the ads are about premium stuff and you can't play songs for long time. the album doesn't come in order. even the ads are too many at same time like their time duration is longer as well as the number. Except that the songs are good. Few songs have lyrical mistakes",
+      "rating": "3",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.0,
+        "positive_terms": 1,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "84b7444a-0145-4205-9db9-790a0520568a",
+      "date": "2026-06-17",
+      "text": "this app sucks it wont even let me listen to music anymore AT ALL like when i search up a song and try to play it, it says i discovered a premium feature. this is literally horrible",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "b1f016fb-0e0d-4eae-8be3-cf987634be41",
+      "date": "2026-06-17",
+      "text": "Nice switch up on genres.",
+      "rating": "4",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.7,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Explore niche or long-tail artists"
+      ],
+      "segments": [
+        "Niche and long-tail fans"
+      ]
+    },
+    {
+      "source": "Play Store",
+      "id": "c20d8926-254d-4607-889b-86f6e0265d6b",
+      "date": "2026-06-17",
+      "text": "THANK YOU FOR THE RESHUFFLE BUTTON. OVERDUE. but whys my search bar so slow? :(",
+      "rating": "3",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Understand algorithm behavior",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14193166726",
+      "date": "2026-06-17",
+      "text": "I don’t understand why we still have this disco ball as the apps logo. It’s freaking hideous and an awful way to celebrate your anniversary or whatever the case. \n\nI’m honestly about to cancel my subscription, and switch back to Apple Music just so I don’t have to look at it.",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Insufficient recommendation controls"
+      ],
+      "intents": [
+        "Control the recommendation model",
+        "Understand algorithm behavior"
+      ],
+      "segments": [
+        "Control seekers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14193083974",
+      "date": "2026-06-17",
+      "text": "My playlist is long and I love it",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14192955644",
+      "date": "2026-06-17",
+      "text": "I do love Spotify and being able to create play lists, listen to specific artists or songs, get the latest new albums right away. However, lately songs have been skipping. It almost sounds like I’m listening to a scratched up cd. Very frustrating. I also would love if there was a way to add your kids and control what they listen to.",
+      "rating": "3",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.0,
+        "positive_terms": 2,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Insufficient recommendation controls"
+      ],
+      "intents": [
+        "Control the recommendation model",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Control seekers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14192712104",
+      "date": "2026-06-17",
+      "text": "I use Spotify exclusively every day over 8 hours I work the night shift so it really helps me keep track so i can focus while i am working i listen to rare bands and different artists around the world!",
+      "rating": "5",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Weak context or mood understanding"
+      ],
+      "intents": [
+        "Match listening context",
+        "Explore niche or long-tail artists",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Mood and context curators",
+        "Niche and long-tail fans"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14192643253",
+      "date": "2026-06-17",
+      "text": "This app is borderline unusable and I’ve had a premium membership for like a decade almost, I still have a plan that includes hulu which Spotify doesn’t even provide anymore. Each update seems to get worse and worse and nothing loads. Nothing that I search for loads, my playlists take forever to load, then opening one takes forever to load the songs, and when I choose a song to listen to, it takes forever to play. It also takes forever to play my local files for whatever reason? Which doesn’t even make sense because they’re my files I’ve provided?? It’s genuinely getting to the point I’m highly considering cancelling my membership entirely and moving to another streaming service, like this is ridiculous. I check their community board and other people have the same issues that they always label as resolved and then ignore all of the comments saying that the issues haven’t been resolved at all. Like what went wrong with this company?",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -4.4,
+        "positive_terms": 0,
+        "negative_terms": 3
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14192587553",
+      "date": "2026-06-17",
+      "text": "One day I can see new music next day , i cannot ! And why the help are you promoting podcasts without my consent . Also , why the hell are there add on Joe Rogan and other podcasts when i pay a subscription!?",
+      "rating": "2",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.7,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Understand algorithm behavior"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14192522886",
+      "date": "2026-06-17",
+      "text": "I love Spotify because even if you  don’t know the name of the song you can just search the lyrics. You can also watch YouTube and some TikTok videos!!",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14192516959",
+      "date": "2026-06-17",
+      "text": "when your shuffling system clearly favors tiktok popular songs to the point of the same 20 songs always being at the top of the mix, and never seeing certain songs above the half way point, you shouldnt call it “shuffle”. call it “tiktok trending radio” 😒",
+      "rating": "3",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.0,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Mainstream or popularity bias",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14192358886",
+      "date": "2026-06-16",
+      "text": "1 star. Stop holding basic music controls hostage behind Premium. I just want to play the songs I like without fighting the app.",
+      "rating": "1",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Insufficient recommendation controls"
+      ],
+      "intents": [
+        "Control the recommendation model",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Control seekers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14192257725",
+      "date": "2026-06-16",
+      "text": "things that annoy me with Spotify it’s annoying that I can’t even play the songs I want. I go to the search bar and I play the song but then it plays a completely different song that I And then I literally have to pay for the songs to show up in order and then I can’t even look at the lyrics because it says I hit the lyrics limit Like what? I also don’t like that u only get 6 skips per hour??? and then when I create a playlist and add all the songs I want I play my songs but they won’t even show in order this was not a problem before I have already updated my app so many times and deleted it too and the problem is still showing.",
+      "rating": "2",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.3,
+        "positive_terms": 2,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14192256659",
+      "date": "2026-06-16",
+      "text": "Showing to many unrequited adds, more new personalized music suggestions instead :)",
+      "rating": "4",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.7,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces"
+      ],
+      "intents": [
+        "Improve music discovery"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14192250674",
+      "date": "2026-06-16",
+      "text": "I love this app it’s so good I can save my favorite songs make playlists the only thing I don’t like is that if u don’t have Spotify premium you get adds like every song or so but still love it!!!",
+      "rating": "4",
+      "sentiment": {
+        "label": "positive",
+        "score": 3.7,
+        "positive_terms": 3,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14192033396",
+      "date": "2026-06-16",
+      "text": "Spotify is the best thing that could have ever happened to music.  I love the way I am allowed to create my playlist and listen for hours on end to my favorite songs.",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191951862",
+      "date": "2026-06-16",
+      "text": "I love Spotify very much. It’s super easy to use, it is very customized to you. my only input that I would give is that sometimes the DJ will repeat the same set of songs over and get caught in a loop. I found that usually closing the app and going back and fixes it",
+      "rating": "5",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.4,
+        "positive_terms": 1,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191932435",
+      "date": "2026-06-16",
+      "text": "So happy with the music! Spotify is always spot on with the rotations of new music and matching to what I am already listening to. Definitely love this app.",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces"
+      ],
+      "intents": [
+        "Find genuinely new music"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191886036",
+      "date": "2026-06-16",
+      "text": "I’ve been a subscriber for many years\nI started when the subscription cost $10. But lately, the clunky menu has just been getting on my nerves. And the recommendations are absolutely terrible. The suggestions are the same tracks I listened to 5 years ago. Why can’t you just create a separate “New for You” playlist?\nOn top of that, they raise the subscription price every year even though the quality of the service is going downhill! A lot of popular tracks are just missing! And now I have to pay $15 for this. I canceled my subscription, but they’ve figured out a way so that in the free version despite tons of ads I simply can’t listen to my own tracks… what a terrible service.",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -2.4,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Low novelty in discovery surfaces",
+        "Mainstream or popularity bias",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Understand algorithm behavior",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners",
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191877446",
+      "date": "2026-06-16",
+      "text": "I love it so much but can you make my playlist longer because my songs don’t be going into my playlist please",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191862870",
+      "date": "2026-06-16",
+      "text": "Has any music you can listen to and keeps track on how much you have been listening to that music you love. I was even able to make my own playlists and add my favorite singers on my playlists. \nI totally recommend downloading Spotify👍👍",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191855305",
+      "date": "2026-06-16",
+      "text": "Spotify does not continuously update your stations. when you go to a previous station, it’s just like listening to the playlist on repeat. It’s the same songs again and it doesn’t add any new ones or any.",
+      "rating": "3",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.0,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191850167",
+      "date": "2026-06-16",
+      "text": "The songs are good, but the UI is insanely bad, I spent three minutes trying to navigate to a playlist, only to find out I had to pay to listen to a specific song.",
+      "rating": "3",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.0,
+        "positive_terms": 1,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191847685",
+      "date": "2026-06-16",
+      "text": "I’ve been dealing with this for a while now, and honestly, it still hasn’t been fixed. Shuffle is supposed to play all my songs… right? Instead, it just keeps replaying the same ones over and over.\n\nI have over 700 liked songs, but somehow only around 30 of them keep coming up. At this point, they’re not just repeated—they’re completely overplayed. It kind of ruins the whole experience of listening to music I actually enjoy.\n\nI’ve even had to remove songs from my playlist just because I’m so tired of hearing them constantly, which defeats the whole purpose of liking them in the first place.\n\nSpotify, please fix this.",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -2.4,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191839016",
+      "date": "2026-06-16",
+      "text": "I love spotify. its easy to use and has every song u can imagine, BUT after every 1-2 songs it starts giving u like 2 or 3 ads and it just really pissis me off and it kills the vibe.",
+      "rating": "3",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.0,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Weak context or mood understanding"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191793165",
+      "date": "2026-06-16",
+      "text": "He's the only one without a premium in my family and he's getting frustrated because he can't skip music without limits, repeat music, please fix this",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191775341",
+      "date": "2026-06-16",
+      "text": "I like Spotify because I can listen to my favorite genre of music all the time. It’s clear and very enjoyable to keep it on while I’m out working.",
+      "rating": "5",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Weak context or mood understanding"
+      ],
+      "intents": [
+        "Match listening context"
+      ],
+      "segments": [
+        "Mood and context curators"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191675534",
+      "date": "2026-06-16",
+      "text": "Turned into a battery sucking app. The AI is horrible, the autogenerated playlists used to exposed me to new music, now it’s just specific artists on specific labels shoved into every auto genned playlist",
+      "rating": "3",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191625642",
+      "date": "2026-06-16",
+      "text": "This app is amazing, and has a variety of great songs and genres. I use it often. My only issue is that I’ll be playing a song, I want to play a song, and suddenly it gives me around 6 ads in a row, lets me listen to 2 \nsongs, and will give me like 5 ads. It’s great, but I don’t want to get the paid version, and just for that it gives me 6 ads in a row. But for what it is, it’s great. Would recommend.",
+      "rating": "4",
+      "sentiment": {
+        "label": "positive",
+        "score": 5.7,
+        "positive_terms": 5,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Explore niche or long-tail artists",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers",
+        "Niche and long-tail fans"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191560890",
+      "date": "2026-06-16",
+      "text": "Its so god everything is oerfect the only reason i gave it 4 stars is it dose not show all the artists albums only most popular but other wise i love it\n\n\n\nMICHAL JACKSON IS FOREVER",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Mainstream or popularity bias"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191440397",
+      "date": "2026-06-16",
+      "text": "It would have five stars if it didn’t play songs that weren’t in my playlist and then not let me skip them",
+      "rating": "4",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.7,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191407275",
+      "date": "2026-06-16",
+      "text": "I am extremely disappointed with the way Spotify limits users from choosing the specific songs they want to hear. The fact that I can search for a song, see it right in front of me, and still be forced to wait, shuffle, or deal with unnecessary restrictions is frustrating and unreasonable.\n\nAs a music streaming platform, your main purpose is to let people listen to the music they enjoy. Instead, Spotify creates obstacles that make the experience feel more like a punishment than a service. Forcing users to wait to manually select songs does not encourage loyalty—it only creates annoyance and drives people away from the platform.\n\nMany users come to Spotify because they want quick and easy access to music. When someone knows exactly what song they want to hear, there is no good reason to make that process difficult. These restrictions make it seem as though user satisfaction is far less important than pushing people toward paid subscriptions.\n\nSpotify has one of the largest music libraries in the world, yet the listening experience for many users is unnecessarily restrictive. Rather than improving accessibility and user experience, these limitations leave people feeling ignored and frustrated. If Spotify truly values its users, it should reconsider policies that prevent people from simply listening to the music they want when they want it.",
+      "rating": "1",
+      "sentiment": {
+        "label": "positive",
+        "score": 4.6,
+        "positive_terms": 6,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191404843",
+      "date": "2026-06-16",
+      "text": "Love all the available songs, especially new artists! Pricing is a little high for regular premium users but is reasonable for student discounts.",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191401195",
+      "date": "2026-06-16",
+      "text": "The best to listen to music and connect with people through playlists",
+      "rating": "5",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191363088",
+      "date": "2026-06-16",
+      "text": "As a user without premium, I understand that the service is not going to be as good, but there are way too many ads. Just a year ago, I had only 2-3 ads after a few songs. But now it’s 3-5 ads even after just 2 songs, to where it has genuinely become unbearable. Plus, whenever I listen to long playlists/liked songs, the algorithm always plays only a certain number of songs and doesn’t play every one, or sometimes plays recommended songs in random intervals. Overall, it’s a great app with adequate service, just needs some improvement.",
+      "rating": "3",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.0,
+        "positive_terms": 2,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191361160",
+      "date": "2026-06-16",
+      "text": "the app was amazing but one thing when i got my new phone it didnt let me play my songs repeating it over and over again like it did on my ipad and both devices dont have spotify premium and now i use my phone all the time and it will not let me play repeating the song but overall this app is AMAZING when i say that you need to download it like its better than other music apps please try spotify",
+      "rating": "4",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.7,
+        "positive_terms": 2,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191315824",
+      "date": "2026-06-16",
+      "text": "Don’t like how there are adds every song and some of these adds are inappropriate for little kids but the app is good if you want    To listen to music you can make playlists for your songs and organize it if you like being organized then I definitely recommend",
+      "rating": "3",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.0,
+        "positive_terms": 2,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191231200",
+      "date": "2026-06-16",
+      "text": "You can play back to a certain time, you cant put songs on repeat and others things unless you have stupid premium like no one’s paying 12 dollars a month just to do basic things",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191162878",
+      "date": "2026-06-16",
+      "text": "This was so so amazing it was entirely free without upgrades not even a monthly trial.  It has almost all the songs you could ever want you can Evan put them on a liked playlist I really like the app.",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191149602",
+      "date": "2026-06-16",
+      "text": "I was Spotify’s biggest fan for 10 years, but I can’t take it anymore. The app is so buggy that it often takes a full minute before music will start playing (I have timed it). It freezes almost every time I try to navigate to a new page then spends another 30 seconds loading the content I try to play once it unfreezes.\nAll of these new features are nice and all, but I’d rather the app actually work than make me another useless AI playlist.",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14191067277",
+      "date": "2026-06-16",
+      "text": "The title is prey self explanatory, what do you mean i have to pay to listen to the songs that are actually on my playlist??? If I feel like listening to music I have to use my iPad, that’s annoying. The skip thing I have no problem with, but everything else is annoying. I can’t even listen to my songs in order. Ts is annoying, and the app is so money hungry",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190958251",
+      "date": "2026-06-16",
+      "text": "Shuffle feels like its playing same songs 20 on a 700 song playlist.",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -2.4,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190870514",
+      "date": "2026-06-16",
+      "text": "This is a really good app for listening to music or listening to podcasts. Sadly I don’t have premium anymore since my parents thought Spotify supported Israel or whatever they heard on the news but other than all the ads it’s pretty good. My only complaint is that there’s sometimes too many ads I get having ads on the podcasts and stuff but now there is ads when you go to your liked songs playlist. So hopefully Spotify fixes that and also why can’t I play songs in order I remember before the latest update you could play songs in order even if you didn’t have a subscription which was nice so hopefully that gets fixed as well. Other than those flaws it’s MUCH better than Apple Music I highly recommend getting Spotify instead.",
+      "rating": "4",
+      "sentiment": {
+        "label": "positive",
+        "score": 3.7,
+        "positive_terms": 3,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Understand algorithm behavior",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190840458",
+      "date": "2026-06-16",
+      "text": "Probably the worst music app ever. Kept signing me out of my account and the link to log back in kept glitching like crazy. It wouldn’t even go through. And this happens ALL THE TIME. Sometimes it takes over 3 hours just to log back in if it will let me. I also think there is way too many ads and I hate how you can’t pick what you want to listen to. I can’t listen to an album without it playing recommended tracks one song in. You also aren’t aloud to pick the songs you want to listen to. If you click on a song after searching it up, it just plays recommended tracks. I would rate it zero stars if I could.",
+      "rating": "1",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.6,
+        "positive_terms": 2,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190741835",
+      "date": "2026-06-16",
+      "text": "After a while it keeps showing recommended. Adding songs to my playlist when I never asked. And won’t even let me see my playlist. Just the songs I added and I can’t even play them.",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190698316",
+      "date": "2026-06-16",
+      "text": "Ever since Spotify made its 15 year update the app has been incredibly slow, taking 5 minutes to load simple song searches. My phone will go dark before Spotify can load the search. This happens only on Spotify.",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190681101",
+      "date": "2026-06-16",
+      "text": "Omg Spotify u saved my life I can listen to any artists and it’s the best and I could listen to podcasts like WTH it’s the best",
+      "rating": "5",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Library history overpowers exploration"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190671827",
+      "date": "2026-06-16",
+      "text": "Hello, my name is Sarah and I personally love Spotify over any other app for music out there. I have tried many apps for music such as Apple Music and Pandora and Spotify has the best deals and the best QUALITY music. You may think that sounds strange but it is entirely true. My family has invested in the family plan and it has done wonders for us. (We are a family of 4). We can all listen to music without messing one of the others music up. We have the ability to make our own playlists, follow artists we enjoy listening to, and follow people that create amazing playlists so that we can go back to them and listen more! Also, if you do not have WiFi in certain places and you still want to listen to music, Spotify PERSONALLY makes an OFFLINE PLAYLIST based on the music you listen to regularly! It’s amazing!! In conclusion, Spotify is the way to go if you want to listen to fabulous music whenever and wherever you are. Please consider getting Spotify so that you can enjoy your favorite songs and artists in your everyday life!",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 4.4,
+        "positive_terms": 3,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190628137",
+      "date": "2026-06-16",
+      "text": "The music is super good, my only issues were that there is SO many ads and if you dont want them you have to pay 12.99 per month. They also dont have an option to just listen to your playlist so you have to listen to random songs. If you want to play a different song you can only change it so often unless you want a long ad. I think that if I dont want to play a song not on my playlist I shouldnt have to listen to an ad.",
+      "rating": "3",
+      "sentiment": {
+        "label": "positive",
+        "score": 5.0,
+        "positive_terms": 5,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190538263",
+      "date": "2026-06-16",
+      "text": "Spotify is awesome and I love it, but I made a separate account because I shared one with my friend and it was getting annoying since I was not able to listen to music when I wanted to, so I made a separate acc without premium. Why on EARTH do I get 6 skips an hour, WHY can’t l go back OR choose the time I want the music to be at, and WHY is it playing my playlist in mix? I don’t want that. I don’t mind the ads but this is getting out of hand and it is ridiculous and just utterly stupid.",
+      "rating": "1",
+      "sentiment": {
+        "label": "positive",
+        "score": 1.6,
+        "positive_terms": 3,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction",
+        "Collaborative discovery gaps"
+      ],
+      "intents": [
+        "Understand algorithm behavior",
+        "Discover socially",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Social discovery users"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190524942",
+      "date": "2026-06-16",
+      "text": "One of the best music platforms for all genres!",
+      "rating": "5",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Explore niche or long-tail artists"
+      ],
+      "segments": [
+        "Niche and long-tail fans"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190514232",
+      "date": "2026-06-16",
+      "text": "There’s too many ads. What do you mean I get about five ads in a row after two songs. It’s ridiculous. And the shuffle button is useless because I get the same song at least once a day on this one playlist I have. And supporting ICE is shameful. Adding all this onto the fact that Spotify underpays artists and raises prices means that greed is what will do them in.",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -2.4,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190512663",
+      "date": "2026-06-16",
+      "text": "As an artist, I grieve what this platform is doing. It marginalizes what isn’t already known/popular and provides little musical variety even to those who want it. \n\nAs a listener, I am disappointed with its narrow and repetitive recommendations (which leave me feeling a little bored and uninspired).",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -2.4,
+        "positive_terms": 1,
+        "negative_terms": 2
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Low novelty in discovery surfaces",
+        "Mainstream or popularity bias",
+        "Library history overpowers exploration"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190429618",
+      "date": "2026-06-16",
+      "text": "Spotify is widely regarded as one of the best music apps ever because of its enormous music library and ease of access. With millions of songs, albums, podcasts, and audiobooks available in one place, users can discover music from virtually every genre, era, and region. Whether someone enjoys mainstream pop hits or obscure independent artists, Spotify makes it easy to find and enjoy content that matches their interests.\n\nOne of Spotify’s greatest strengths is its recommendation system. The platform uses listening habits, saved songs, and user preferences to suggest music that feels surprisingly personalized. Features such as Discover Weekly and Daily Mixes help users uncover new artists and tracks they may never have found otherwise, making music discovery a seamless and enjoyable experience.\n\nSpotify also excels in creating personalized playlists. Instead of requiring users to spend hours organizing music manually, the app automatically generates playlists tailored to moods, genres, and listening patterns. These playlists evolve over time, ensuring that recommendations remain fresh and relevant as users' tastes change.\n\nAnother reason Spotify stands out is its user-friendly design. The interface is clean, intuitive, and accessible across devices. Whether someone is using a smartphone, tablet, desktop computer, smart speaker, gaming console, or car entertainment system, Spotify provides a consistent experience that is easy to navigate and understand.\n\nThe app’s social features add another layer of appeal. Users can share songs, playlists, and albums with friends, follow each other’s listening activity, and collaborate on playlists together. This transforms music from a solitary experience into a shared one, allowing people to connect through their favorite artists and tracks.\n\nSpotify’s cross-platform functionality is another major advantage. Users can start listening on one device and continue on another without interruption. Features like Spotify Connect allow seamless control of playback across compatible devices, making it convenient to move music from headphones to speakers, TVs, or computers.\n\nThe platform has also become a leader in podcast distribution. Beyond music, Spotify offers access to a vast collection of podcasts covering topics such as news, entertainment, business, science, sports, and education. This makes the app more than just a music service—it serves as a comprehensive audio platform for a wide range of interests.\n\nOffline listening is another feature that contributes to Spotify’s popularity. Premium subscribers can download songs, albums, and playlists for use without an internet connection. This is especially useful for travel, commuting, or areas with limited connectivity, ensuring that users always have access to their favorite content.\n\nSpotify continually innovates by introducing new features and improving existing ones. From AI-powered playlists and personalized listening experiences to enhanced audio options and better content discovery tools, the company regularly updates the platform to keep it modern and competitive. This commitment to innovation helps maintain its position as a leader in the music streaming industry.\n\nUltimately, many people consider Spotify the best music app ever because it successfully combines convenience, personalization, variety, and accessibility. Its ability to help users discover new music, connect with others, enjoy content across devices, and access a vast range of audio entertainment has made it one of the most influential and beloved music platforms in the world.",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Weak context or mood understanding",
+        "Insufficient recommendation controls",
+        "Mainstream or popularity bias",
+        "Library history overpowers exploration",
+        "Search and browse friction",
+        "Collaborative discovery gaps"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Control the recommendation model",
+        "Match listening context",
+        "Explore niche or long-tail artists",
+        "Discover socially",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers",
+        "Mood and context curators",
+        "Niche and long-tail fans",
+        "Control seekers",
+        "Social discovery users"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190425317",
+      "date": "2026-06-16",
+      "text": "Spotify is a superior streaming platform. From finding new music, podcasts, workouts, audiobooks, they have positioned themselves to optimize these functionalities compared to other platforms. The Spotify wrapped experience, the ability to summarize and contextualize the user’s music preferences in interesting ways is unmatched and we have seen other platforms attempt to replicate similar experiences (albeit not to the same impact). 10/10 would recommend, and I say this as someone who has used Apple Music, SoundCloud, Pandora, and YouTube.",
+      "rating": "5",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.4,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Low novelty in discovery surfaces",
+        "Weak context or mood understanding",
+        "Collaborative discovery gaps"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Refresh stale recommendations",
+        "Match listening context"
+      ],
+      "segments": [
+        "Comfort-loop listeners",
+        "Active explorers",
+        "Mood and context curators"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190416927",
+      "date": "2026-06-16",
+      "text": "I have been a premium subscriber for about 10 years now and Spotify really needs to find a way to fix its shuffle. It’s absolute horrible since it plays the same 100 songs in a shuffle in a playlist no matter how many time you clear the cache or restart the app. Other than the shuffle issue it is a good alternative to the other music streaming services. Once the shuffle is fixed it would be a great choice.",
+      "rating": "2",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.3,
+        "positive_terms": 2,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190369921",
+      "date": "2026-06-16",
+      "text": "Only place where I can make a playlist and never get tired of listening to it & no adds makes it the best there is!",
+      "rating": "5",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190338041",
+      "date": "2026-06-16",
+      "text": "Plays the same songs over and over again even though playlist is 72 hours long",
+      "rating": "3",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.0,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190291747",
+      "date": "2026-06-16",
+      "text": "Too many ads and i watch the 30 minutes free then 2 songs later I get 3 ads in a row then after 1 more song it gives me another ad while at the same time I make a playlist and it adds songs in it and most the time does not play my songs \n\nEdit: I’ve had premium for some years now since making this original 3 star rating. I’m changing it to 1 star because this is absolutely garbage. Before building your playlist and liked songs up on this platform I really recommend looking into many streaming platforms before. They will constantly raise the prices, even with premium you’ll still get ads on podcast and audio books, the shuffle is an absurdly bad shuffle. Like you want to shuffle through your random 2k plus liked songs and guess what. You know how you listened to a band you liked yesterday. Guess what now you get to hear the same song in shuffle 4 times today. Because the so random things gotta be random. Also this isn’t just a 1 song/band kind of deal. That I could deal with. This is the fact that I only ever listen to like 100-200 of the same songs cause they are too focused on money drives than making an app that people want to use. I have had days at work where I will get the same line up on a “random” queue. Yk how improbable it is to get the same 5 song line up over 4 times in a week. Well on here it’s very possible and likely. “Smart shuffle” repeats the same songs/artist so often it’s actually more worth it to do regular random even with its algorithm that’s not actually random. You can try all the tips online like clearing cache. It doesn’t matter. This is a lot I’ve typed but that’s how actually bad this app is. Save yourself the trouble of waiting for this platform to get better. I’ve been waiting since 2018 and some how they’ve only gotten worse since 2020",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -7.4,
+        "positive_terms": 3,
+        "negative_terms": 9
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners",
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190267173",
+      "date": "2026-06-16",
+      "text": "My family pays for apple music, but i pay for Spotify premium with my own money because its so good! Its also where i discovered my latest obsession---Stray Kids! If hearing about the ads worries you, dont worry, their only like every 5-6 songs. And premium is pretty cheap, so if it really bothers u, i recommend paying for it. You can download music then too!",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190135480",
+      "date": "2026-06-16",
+      "text": "As soon as Spotify started, I started looking up my favorite songs and artist.  I’ve been a True Spotify Lover. But money wise I wasn’t able to purchase there awesome comercial free, & able to repeat songs or skip to the next one with out having a limit. As soon I as could justify taking money from my family budget. I bought it. &. OMG Do I love it even even MORE!!!  & I so love the “hey a year ago this, is the song you played the most”. Or your most favorite artist. & at the end of year these’s songs you played the most. And you hear a voice or see a video of that artist thanking you for being such an awesome follower love love love it. Keep it coming….. 🥰😀😁",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 6.4,
+        "positive_terms": 5,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190114532",
+      "date": "2026-06-16",
+      "text": "Love this app. Only thing that’s annoying is the limited skips and no loop if you don’t have premium. 9/10 otherwise!",
+      "rating": "4",
+      "sentiment": {
+        "label": "positive",
+        "score": 1.7,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14190055448",
+      "date": "2026-06-16",
+      "text": "One of the few qualms that I have with Spotify is that it recommends a lot of AI-generated music which I strongly dislike. It’s inconsiderate and disrespectful towards bands/musicians/artists that are professions in this realm. There’s also no option for Spotify to filter out AI-generated music which is extremely frustrating. Please come up with a way to control this. It’s infuriating. \n\nMy other qualm is that when I try to shuffle my 1,000+ song playlist, it somehow manages to play the same artists and even songs in the same order I last shuffled it in. I would prefer an actual shuffle where it goes through songs I haven’t listened to in a while.\n\nOtherwise, I like that it gives me exposure and accessibility to a wide range of music. I also like the events tab where it lists bands that I listen to that will be touring where I set the location to.",
+      "rating": "3",
+      "sentiment": {
+        "label": "negative",
+        "score": -2.0,
+        "positive_terms": 0,
+        "negative_terms": 2
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Insufficient recommendation controls",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Control the recommendation model",
+        "Explore niche or long-tail artists",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners",
+        "Active explorers",
+        "Niche and long-tail fans",
+        "Control seekers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14189974165",
+      "date": "2026-06-16",
+      "text": "I’ve been listening to Spotify for about nine years. Making playlist at first was a challenge, but I love it whatever type of music I wanna hear. I just pull up one of my playlists! The only difficult part was sharing. I just realized now that I have my iPhone that you have to go into settings and then you can!\nVery cool!!",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14189891681",
+      "date": "2026-06-16",
+      "text": "ok so this app is super cool and can do a lot of things. you can make playlists, make playlists WITH others, it has like every song and you can connect to cars and speakers and stuff. the only bad part is sometimes the ads can go up to like 2 minutes..but if you biy premium there are no ads and the ads dont come very often. definitely recommend!",
+      "rating": "5",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.4,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14189848773",
+      "date": "2026-06-16",
+      "text": "the music is very organised, spotify has great recomandations for new songs and playlists. it is quick and easy to acsess music and it is really easy to locate playlists and songs from your library and anywhere  :)",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Library history overpowers exploration",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14189817700",
+      "date": "2026-06-16",
+      "text": "I would give a no star if it was possible. Contacting Spotify is incredibly hard. All they have is AI robots responding to you. I use Spotify Free on iPhone. I understand ads are part of the free service, but I don’t want recommended songs inserted into playlists I created. I would like an option to turn off Smart Shuffle without requiring Premium. If this continues, I am seriously considering deleting my account and just leaving Spotify and finding a different music provider.",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 1,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Low novelty in discovery surfaces",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners",
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14189815997",
+      "date": "2026-06-16",
+      "text": "I started the first song on my playlist and an ad started less than 10 second into the song.  I’ll research the cause later but it would be great for adds to happen only between songs.",
+      "rating": "4",
+      "sentiment": {
+        "label": "positive",
+        "score": 1.7,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14189760583",
+      "date": "2026-06-16",
+      "text": "Ok, so lately on my IPhone, Spotify has not been working at all. It will play the first 10 seconds of a song, then suddenly start the endless buffering and error message, saying Oops you are offline or something like that. I’ve cleared the cache, deleted the app and reinstalled….. nothing works. Quite frustrating.",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Weak context or mood understanding"
+      ],
+      "intents": [
+        "Match listening context",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Mood and context curators"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14189670510",
+      "date": "2026-06-16",
+      "text": "i don’t really like the recommendations, for music. is there some way I can stop it. and ask if I want it.",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces"
+      ],
+      "intents": [
+        "Improve music discovery"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14189609328",
+      "date": "2026-06-16",
+      "text": "I will y wish there was a way to easily rearrange the order of your songs on all playlists.  Like a simple drag method",
+      "rating": "5",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14189589568",
+      "date": "2026-06-16",
+      "text": "Please fix your shuffle to work functionally. It’ll only play 40 songs out of my playlist full of thousands of tracks. Also, fix your radio stations to finding more new music, not recycling what I’ve already found.",
+      "rating": "2",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.7,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Low novelty in discovery surfaces",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners",
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14189460725",
+      "date": "2026-06-16",
+      "text": "not displaying songs randomly, stop adding new features and make a working app pls",
+      "rating": "3",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0.0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Weak context or mood understanding"
+      ],
+      "intents": [
+        "Match listening context",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Mood and context curators"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14189441938",
+      "date": "2026-06-16",
+      "text": "Got all the songs You’ve been looking for. All the Remixes and playlists are awesome. 5 star rating. No need for ads though lol",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 2.4,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14189365584",
+      "date": "2026-06-16",
+      "text": "This application is so much easier to use compared to Apple Music or pandora. I love that we can share our playlists with anyone and it’s free! I love it!",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 3.4,
+        "positive_terms": 2,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction",
+        "Collaborative discovery gaps"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14189282933",
+      "date": "2026-06-16",
+      "text": "Generally “satisfied” with the service but a couple points for improvement. #1 Fix Synching across multiple devices! VERY frustrating to edit a playlist on my iPad but changes not seen on phone. #2 Communicate (give a notice) when certain songs disappear from the platform. When this happens, I am left googling: Why did Spotify drop … song? I realize the notion of effective customer support is quaint, but why not try to be better?",
+      "rating": "3",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.0,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Understand algorithm behavior",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14189282576",
+      "date": "2026-06-16",
+      "text": "I’ve been using Spotify for about two years now, and I absolutely love it. I love being able to create my own playlists and discover playlists made by others. The family plan is a huge plus because everyone can have their own account, and I can also control what my child listens to with the kid-friendly options.\n\nThe app connects seamlessly across all my devices, and I’ve never had issues with lagging or buffering. It’s incredibly easy to use, and I love that I can listen offline whenever I need to. Overall, Spotify has been a fantastic experience, and I honestly wouldn’t go back to any other music app. Totally recommend it 😊",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 5.4,
+        "positive_terms": 4,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Insufficient recommendation controls",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Control the recommendation model",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers",
+        "Control seekers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14188895653",
+      "date": "2026-06-16",
+      "text": "I can’t not touch my phone for 2 songs in albums and small playlists because of recommended songs I don’t even like or know about. Please at least limit the amount of recommended songs that are on these albums and small playlists",
+      "rating": "1",
+      "sentiment": {
+        "label": "negative",
+        "score": -1.4,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14188770802",
+      "date": "2026-06-16",
+      "text": "I love this app and I've been using it for years. Premium is nice but decently pricey so pay what you will! The only issue I have with the app is it frequently crashes. This started happening recently and it's because of the huge load of songs I have. I download all my songs and I have 10,000+ liked songs so the app crashes very often. Other than this the app is wonderful and it is very unlikely other's will have the same issue as me so enjoy the app!",
+      "rating": "5",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1.4,
+        "positive_terms": 1,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14188462562",
+      "date": "2026-06-15",
+      "text": "I really enjoy this app with all of the unique playlist on here and compared to other apps. There’s just seems to be some more artists. Only complaint is if you’re not on premium version there’s so many ads. It’s really annoying. I’ll just be trying to play a song that’s been stuck in my head all day or something and then there’s like five ads that last about two minutes. And they’re really repetitive because it’s the same ad like two times in those five ads. And I’ll just hear similar ads. It’s just to a point where it’s very annoying. So I suggest finding something with a few less apps if you do not want to pay.",
+      "rating": "4",
+      "sentiment": {
+        "label": "mixed",
+        "score": -0.3,
+        "positive_terms": 1,
+        "negative_terms": 2
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Low novelty in discovery surfaces",
+        "Search and browse friction",
+        "Collaborative discovery gaps"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "App Store",
+      "id": "14188457887",
+      "date": "2026-06-15",
+      "text": "I have been cheated on (I’m a boy) been beated to the point I’m coming home with bruises and bloody nose and l try my hardest to be good.nothing goes my way.l lost all my friends.my sister left the house but my life has been getting better ❤️‍🩹 and when l listen to these songs l feel better than l was back then",
+      "rating": "5",
+      "sentiment": {
+        "label": "positive",
+        "score": 4.4,
+        "positive_terms": 3,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Collaborative discovery gaps"
+      ],
+      "intents": [
+        "Discover socially",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Social discovery users"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-2",
+      "date": "2026-06-18",
+      "text": "2017l6 Chill Vibes. https://open.spotify.com/playlist/28ResSXkQi4lgCtxMIVrly?si=EyszhT\\_HRMaLZAW46uvOyw&pi=KvX5DfWNR6Gsm ​ I dont know if you look back on 2016 the same way I do. For myself, it was a magical summer. Chasing friends all over the pnw to different parties, roaming parks and hiking trails, beach trips, a year for me that encompassed freedom and socializing. Throughout it all, this absolute jam was in the background, cranked or quiet. Bluetooth speakers in my passenger seat, sound system in my bedroom, or packed tightly into my ears. Towards the end of the summer, Spotify hijacked the Playlist title and swapped out the majority of the songs, which was pretty devistating. ​ Sometime later, I discovered the Playlist on YouTube. Sadly, a number of the songs, videos, were delisted or private or missing. Piece by piece I rebuilt this Playlist, so I could relive it at a moments notice. Never thought I'd be here 10 years later still calling on it to bring me back down to earth when stressed, aggravated, or just looking for something to compliment my chill. I hope this Playlist brings back memories, reminds you of a time and space that only exists in our heads and hearts. Give it a try if you're u familiar, I find it to be timeless and hope to enjoy it for many more decades. ​ If you know of any songs that are missing, please reach out. There are probably a dozen titles that either Spotify no longer offer or that I couldn't generate titles for off of the YouTube Playlist. submitted by /u/Ancient_Database [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "negative",
+        "score": -1,
+        "positive_terms": 0,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Low novelty in discovery surfaces",
+        "Weak context or mood understanding",
+        "Search and browse friction",
+        "Collaborative discovery gaps"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Refresh stale recommendations",
+        "Discover socially",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners",
+        "Active explorers",
+        "Social discovery users"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-3",
+      "date": "2026-06-18",
+      "text": "What's on your repeat list..here's mine. Give this playlist a listen: On Repeat https://open.spotify.com/playlist/37i9dQZF1Epk6WY1cJneTt?si=O8W4QXhzSWO-SSJX1pH-Qw&pi=83346UTySJiQa ​ ​ Also, how do you get music on your repeat playlist? I go as far as to listen to the song I want on my repeat playlist, on repeat for the 45 minutes it takes me to get home from work..if I find a great song I like! I listen to all kinds of music! Thanks for sharing your lists! submitted by /u/Aaron15007 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "positive",
+        "score": 2,
+        "positive_terms": 2,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-11",
+      "date": "2026-06-18",
+      "text": "EDM/Dance Ultimate Playlist Share Thread. Check out this playlist updated weekly with top club/dance/edm songs! Share your playlists below and save new ones you love! submitted by /u/TMR_Music [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-15",
+      "date": "2026-06-17",
+      "text": "LF: old school Hawaiian playlists. Preferably nothing past the mid 80’s. The last popular band I knew of was kalapana, but I remember listening to vinyls from the 40’s,50’s and 60’s because of my grandparents, but I can’t remember any of the name or titles. submitted by /u/Surreal_Cereal_K [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Mainstream or popularity bias",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-16",
+      "date": "2026-06-17",
+      "text": "What Planet Is This. 𝘞𝘩𝘢𝘵 𝘗𝘭𝘢𝘯𝘦𝘵 𝘐𝘴 𝘛𝘩𝘪𝘴?̾ Retrofuture Laser Funk? This playlist features -Loving attention to play order and transitions (w/ updating) -Old school aesthetic -Surprisingly acoustic guitar submitted by /u/ForayForay [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-17",
+      "date": "2026-06-17",
+      "text": "musica obscura. I really wanted to create the playlist of texture-driven atmopsheric music that will be not yet another \"music for relaxation\". So here is my collection of bold and experimental electronic music by genre pioneers and outsiders as well as local Ukrainian scene. Hope you enjoy https://open.spotify.com/playlist/6CfMtO7iUCzZAGEHeJ6Ti1 submitted by /u/Defiant_Process_992 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-18",
+      "date": "2026-06-17",
+      "text": "Ultimate Classic Rock Playlist. Classic rock playlist I’ve been slowly adding too for the past 5 years. Not your typical songs you hear on the radio (although they’re on there). 30+ hours and updated weekly submitted by /u/lanwilder26 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-21",
+      "date": "2026-06-17",
+      "text": "I made a playlist that follows the entire anatomy of falling in love.. I built a playlist that tells a complete story, it starts with loneliness and longing, then comes friendship, the first spark and then falling harder, commitment, distance, heartbreak and finally learning to live with the memories. Every song isn’t just there because it’s good it represents a specific emotional stage in the journey. The order matters more than the individual tracks. So I called it “The Anatomy of Love.” I’d be really glad if you could make some time to give it a listen and let me know what you think. Whether it’s a suggestion for a better song, a change in sequencing or even a stage that is missing. Here’s the playlist: https://open.spotify.com/playlist/4j0tLjNXiNsylg8WxzFFFr submitted by /u/Reasonable-Try-6727 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "positive",
+        "score": 4,
+        "positive_terms": 4,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction",
+        "Collaborative discovery gaps"
+      ],
+      "intents": [
+        "Discover socially",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Social discovery users"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-25",
+      "date": "2026-06-17",
+      "text": "Klangwald Charts Playlist. Klangwald - Chart of the week (25/2026) submitted by /u/Pee_Wee_Walrus [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-27",
+      "date": "2026-06-17",
+      "text": "Give me recs based on my playlist. submitted by /u/SaltInflation1235 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-28",
+      "date": "2026-06-17",
+      "text": "Massive Playlist 643hrs. HIPHOP VS METAL https://open.spotify.com/playlist/7bnDtzc7QivOegdsDY4Ksc?si=sK6c5cp5TqC3B-DQJbJYfA&pi=ttWdgCt0TRWYE submitted by /u/TOAD_HYPNO666 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-29",
+      "date": "2026-06-17",
+      "text": "I think I found the hidden gem of Spotify hip hop/rap mixes. +14h of non stop music with great transitions https://open.spotify.com/playlist/7qwewkfP3SEseZglgULezq?si=p6wQcvr2SaK03y-vv4eubw&pi=6phi82sBQG-Bq submitted by /u/Ok_Serve6440 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-34",
+      "date": "2026-06-17",
+      "text": "metal, rock and punk songs with female vocals. Hi hi, leaving here this playlist with songs that some of you guys recommended me! thank you so much, i loved to hear new bands! hope you guys enjoy this playlist as much as i do. submitted by /u/thisisyueee [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Explore niche or long-tail artists",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers",
+        "Niche and long-tail fans"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-36",
+      "date": "2026-06-17",
+      "text": "Check out my playlist and let me know if you can think of any songs that might fit the theme. I made a playlist that's mostly alternative rock type of songs that all share the common theme of being about old petty feelings you can't quite let go of, I would love to add some more songs if anybody has any! https://open.spotify.com/playlist/3pMIjFtoDTJNHywSbauQss?si=o3pW7UTZScO5ii2wyARxkA submitted by /u/DaniMZ21 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-37",
+      "date": "2026-06-17",
+      "text": "90's Nostalgia Playlist on Spotify and 2000's Nostalgia playlist on Spotify curated by CallMeThe PSYCHO X.. Some playlists filled with the most popular songs from the 90's and 2000's! Hope you enjoy! Tell me if I forgot to add some songs! 👍 These playlists are freshly curated and do not have a lot of songs right now, I'll add some! :) Any saves are really appreciated 👍! 😃 2000's playlist: https://open.spotify.com/playlist/3Lvs3t2fEBkM5uod63fSbE?si=tT0VwTmkSE-qvh6hS4WTeg 90's Playlist: https://open.spotify.com/playlist/2PfbiLPVSfEQdHVrjTzN5a?si=r10B7d94SYuPYter6kce0g submitted by /u/Free-Library-1747 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Mainstream or popularity bias",
+        "Library history overpowers exploration",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners",
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-39",
+      "date": "2026-06-16",
+      "text": "playlist for letting go and moving on. submitted by /u/Jealous_Duty_7357 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-40",
+      "date": "2026-06-16",
+      "text": "Rate the playlist?. https://open.spotify.com/playlist/6YWCzsaMqMiIpTQEOT7tt3?si=OwG0w6yBRaamr37W\\_YA5pQ submitted by /u/Persona3israd [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-42",
+      "date": "2026-06-16",
+      "text": "Gym Song Recommendations. I’m trying to make the best gym playlist on Spotify and I need some song recommendations https://open.spotify.com/playlist/76okCqjBBWqztKXLNzZvW6?si=taXzkqcASX6xNwd43HcWSA&pi=XJOlprXmRoajd submitted by /u/Murky_Strawberry7531 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Weak context or mood understanding",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Match listening context",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers",
+        "Mood and context curators"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-43",
+      "date": "2026-06-16",
+      "text": "2016 playlist. Feel like your in 2016 again with this Playlist! submitted by /u/ProfessionalDay4064 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-49",
+      "date": "2026-06-16",
+      "text": "Huge Playlist Name Ideas... So I listen to a ton of different genres and I'm going to put them all in one playlist. I was thinking of calling it 'Shuffle Me' or 'The Vault'. Anyone else have more ideas which I can consider? submitted by /u/NewCorpse96 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Explore niche or long-tail artists",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners",
+        "Niche and long-tail fans"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-51",
+      "date": "2026-06-16",
+      "text": "ultra specific loser rock/metal playlist. Heya guys, I want to search for a playlist that would work best for me. I want a playlist that would include bands like Car Seat Headrest (pre 2015), WillyRodriguezWasTaken, Lifelover, Silencer, Julie, Weatherday, Have A Nice Life, Stomach Book and etc. Does anyone have a sickass playlist that includes sm underground indie/noise rock, shoegaze/nugaze/doomgaze, metal/dsbm, emo/screamo/grunge ????? Everytime when I want to search for playlists like those on my own, they alr have songs that Ive liked, I want a playlist that'd include songs that I don't know mixed with those I really love!!.. hava great day y'all. submitted by /u/Odd-Iron-6860 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "positive",
+        "score": 6,
+        "positive_terms": 6,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Explore niche or long-tail artists",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Niche and long-tail fans"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-53",
+      "date": "2026-06-16",
+      "text": "I think this is my favourite playlist overall - so many world-class voices!. Smaller, lesser-known artists never fail to impress me. Feel free to drop a link if you think I've missed a recent track with a beautiful vocal. VOCALS Spotlight submitted by /u/GuestImpressive1717 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Explore niche or long-tail artists",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Niche and long-tail fans"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-54",
+      "date": "2026-06-16",
+      "text": "Screamo without the Screamo. A friend I asked for song recommendations based on their liking introduced me to Screamo and I love the sound of the beats but I just can’t do actual Screamo part,I want to hear and understand the lyrics perfectly wondering if something like that exists The less the artist is known the better and just song recommendations works too thank you submitted by /u/R-tic [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "positive",
+        "score": 3,
+        "positive_terms": 3,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-55",
+      "date": "2026-06-16",
+      "text": "Global Viral 50. Hello folks. Since Spotify decided to do away with their global viral 50 playlist, I haven't found anything else that resembles it. All of the \"global top lists I've found on Spotify aren't really global, they only have music from the US. Someone in this sub mentioned a playlist that comes close on YouTube. ​ I have taken the liberty of making this playlist on Spotify, up to song 50. I will try my very best to update the playlist on a weekly basis. ​ Global Viral 50 submitted by /u/ish986 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-56",
+      "date": "2026-06-16",
+      "text": "I NEED ARTIST RECOMMENDATION LIKE RICKY MONTGOMERY. Ricky Montgomery has been on my top list since last year, every month. I literally cannot stop listening to him. His music flows in my veins. Someone please recommend me underrated whimsy/indie/pop artists like him. submitted by /u/Ok-Researcher2797 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-61",
+      "date": "2026-06-16",
+      "text": "Goth Club. I made a playlist of songs you'd likely hear at the Goth Club 🖤🦇🕸 Enjoy! 🧛‍♀️ ​ https://open.spotify.com/playlist/2MXl6WLsmWB8bHur136TVY?si=vPYeP4-cQj6OhmnIksrX3A&pi=LrCkYt\\_BTuSPi submitted by /u/Frozensorrow604 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-63",
+      "date": "2026-06-16",
+      "text": "Playlist building tips and tricks. I got hella songs and listen to a lot of rap, R&B, alternative, melodic stuff, but when it comes to actually making playlists I kinda struggle. Not with finding songs, more with making the playlist feel like it has a theme or vibe instead of just being a bunch of songs thrown together. What are some of your favorite playlist themes or concepts you’ve made? Could be something broad enough for 100+ songs or something super specific Let me know what your guys process is submitted by /u/Datdudelolk [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Weak context or mood understanding",
+        "Mainstream or popularity bias",
+        "Search and browse friction",
+        "Collaborative discovery gaps"
+      ],
+      "intents": [
+        "Discover socially",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Social discovery users"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-67",
+      "date": "2026-06-15",
+      "text": "Looking for kids playlists. Under 10. But would enjoy adult stuff that excluded the explicit. My kids love to listen to music and I'm trying to set up their own accounts. I would like to just setup a jukebox style player for them and allow them to play on their own but make it simple with happy songs, rock songs, and pop songs etc. but I need it to be kid friendly. I've searched through Spotify and have some lists but would love more. submitted by /u/Thebigtallguy [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "positive",
+        "score": 3,
+        "positive_terms": 3,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Weak context or mood understanding",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-70",
+      "date": "2026-06-15",
+      "text": "A small playlist I created for hardwave.. I created this small playlist for hardwave songs that i like a lot, mostly for driving, studying or working. https://open.spotify.com/playlist/60V61UpYnqDdJNl46aw0uR?si=EYlMqHmKR3CSAbsJT9I2hg&pi=ww1cqdVmRB2L0 I tend to update this playlist weekly, but would also love to hear your recommendations for new stuff. submitted by /u/felipemorandini [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Weak context or mood understanding",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Match listening context",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers",
+        "Mood and context curators"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-72",
+      "date": "2026-06-15",
+      "text": "Hip hop songs listeners have been voting on lately. Put together a playlist of hip hop artists that have been receiving votes from listeners on The Cauldron. Thought I'd share it in case someone is looking for new music to check out. https://open.spotify.com/playlist/5Uqq4C32ZLWflYtrLJry9K submitted by /u/First_Weather_9943 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Search and browse friction",
+        "Collaborative discovery gaps"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Discover socially",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers",
+        "Social discovery users"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-76",
+      "date": "2026-06-15",
+      "text": "looking for songs to build my whimsical spring playlist!. hello! I am looking for songs with a specific vibe i'd like to add to my spring-themed playlist. songs like Sarah by Alex G, like u love me by Rin, Strawberry Blonde by Mitski, and basically any Adrianne Lenker song are examples of what i'm looking for! sorry if this is a really specific request, i'm just curious if anyone knows any playlists or songs with this specific vibe. thanks for anyone who contributes! submitted by /u/jimothy_bartholomew [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Weak context or mood understanding",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-77",
+      "date": "2026-06-15",
+      "text": "What early 80s synthpop needs to be in this playlist?. Currently around 30 tracks, but please let me know which early 80s synthpop track needs to be added to this playlist 👩🏻‍🎤 https://open.spotify.com/playlist/2BqemxG1pJ2PERyZpjpdPQ?si=jDpVSUl2S2W0UPfsv9vt1g submitted by /u/DiscoRickyy [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-82",
+      "date": "2026-06-15",
+      "text": "New Australian Indie & Alternative Renaissance. https://open.spotify.com/playlist/3CII1D8TaFGpmIuts7evmq submitted by /u/Babys_on_pizza [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-84",
+      "date": "2026-06-15",
+      "text": "Talented connoisseur Spotify user. Who is the greatest playlist maker you came across on the app and what are your favorite playlists I’m talking in terms of diversity of genres and the creativity of the ability to set a strong vibe/atmosphere from the name and cover of the playlists Edit: Found this who guy has the most curated playlists library I have ever seen. He’s creating vibes as if you’re in a movie and does extremely niche content as well Here are some examples Living in a cyberpunk dystopia https://open.spotify.com/playlist/0G882WsZZfhIMQfajDqXAB?si=9ct40HX9QwSnLKtdxuk80g&pi=KoXXjQ7hQqGDE Newspaper boy stereotype of 90s movies https://open.spotify.com/playlist/4L2sGFPaFtzOP3AsiTs5w7?si=xykH-ch2TVS6a8G0YYC2yQ&pi=e7JBtoczS5Wgs Trapped in an 80s arcade https://open.spotify.com/playlist/1i6MUI24paRLndJtlIXYtU?si=1B9oEeRNRP2KEtDb4eYp5Q&pi=fAd5CiLrRO622 submitted by /u/DoriCavi [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 1,
+        "negative_terms": 1
+      },
+      "themes": [
+        "Weak context or mood understanding",
+        "Library history overpowers exploration",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Explore niche or long-tail artists",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Niche and long-tail fans"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-86",
+      "date": "2026-06-15",
+      "text": "Best Gym Playlist. I’m always looking for the best workout songs and I know a lot of people are so I made a playlist with the best ones I found also if you have any you want to add lmk https://open.spotify.com/user/31u7hr5nxvfx5xwcrxvuspqlxgom?si=4lmgT\\_iHTbiIaUqqmcLxeg submitted by /u/Murky_Strawberry7531 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Weak context or mood understanding",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Match listening context",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Mood and context curators"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-87",
+      "date": "2026-06-15",
+      "text": "Coffee & Chill (ease into your day). Coffee & Chill seems to be my most popular playlist. It’s full of soul, indie and singer-songwriter grooves for coffee, slow mornings and quiet afternoons. A great listen that eases you into your day. (I update it every Monday) Enjoy! submitted by /u/_JTC10_ [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Mainstream or popularity bias",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-88",
+      "date": "2026-06-14",
+      "text": "Good Playlisters. Hello hello. I’m a big fan of constantly updating playlists, I like a wide range of music but tend not to get “too nerdy…” (metal, prog rock, alt rock vibes). And will lean towards more popular stuff (country, folk, pop, r&b, rap, drill). I have followed Jah Talks Music for a while and love the regularly updated playlists. Are you aware of any other playlisters that update regularly with new music and updated playlists to discover new music. Let me know :) submitted by /u/Upper_Security5810 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "positive",
+        "score": 2,
+        "positive_terms": 2,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Weak context or mood understanding",
+        "Mainstream or popularity bias",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-90",
+      "date": "2026-06-14",
+      "text": "Coldplay Best Of - Spotify Playlist created by CallMeThe PSYCHO X. Do you love Coldplay? I created a playlist that has all of the classics of Coldplay! Enjoy! Any saves are really appreciated 👍! https://open.spotify.com/playlist/1EAor2yC6gbYVwSQaOZ4oM?si=uPbPINhrTZ6QlrxImAipog&pi=QlNIy2PtRFeON submitted by /u/Free-Library-1747 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Library history overpowers exploration",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-91",
+      "date": "2026-06-14",
+      "text": "a red playlist that builds up from soft dream pop into heavy MBV, and then fades out into acoustic tracks.. Tried to capture that specific feeling of late-night obsession and distance. ​ The transition leading into 'when you sleep' and coming out of it into more atmospheric acoustic stuff worked out better than I expected. ​ No shuffle if you give it a listen! submitted by /u/dxbae_ [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Weak context or mood understanding",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Comfort-loop listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-92",
+      "date": "2026-06-14",
+      "text": "Playlists per decade; 1950s - 2020s.. I grew up with radio stations that focused on specific decades, but I never liked the music they chose to play so I made my own to listen to when I want: 50’s on 5 60’s on 6 70’s on 7 80’s on 8 90’s on 9 2000 10% 20/20 submitted by /u/2XSLASH [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-93",
+      "date": "2026-06-14",
+      "text": "Modern/Classic Rock Blend. Three modern-day rock tracks followed by two \"deep album tracks\" from past years (pre-2000), then repeats the pattern! Come on in and join the party! 🔊🔊 submitted by /u/RickTeleStrat57 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Repetitive recommendations",
+        "Collaborative discovery gaps"
+      ],
+      "intents": [
+        "Refresh stale recommendations",
+        "Discover socially"
+      ],
+      "segments": [
+        "Social discovery users"
+      ]
+    },
+    {
+      "source": "Reddit",
+      "id": "reddit-rss-94",
+      "date": "2026-06-14",
+      "text": "My 35 Hour Japanese Playlist. https://open.spotify.com/playlist/1H259JSUheCwPBNSYwZP5Q?si=Kwe0j\\_RuQ46Smc8hpRnphQ A wide variety of Japanese songs that I grew up on or have grown to love over the years. If anyone has other song suggestions I’d greatly appreciate any! submitted by /u/Mental_Season_8420 [link] [comments]",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 1,
+        "positive_terms": 1,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-7",
+      "date": "2026-06-18",
+      "text": "[Android] Playlists not loading",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-8",
+      "date": "2026-06-18",
+      "text": "Autoplay/ Radio not working properly",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Weak context or mood understanding",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Match listening context"
+      ],
+      "segments": [
+        "Mood and context curators"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-10",
+      "date": "2026-06-18",
+      "text": "Shared playlists & audiobooks not working on Kids/Managed accounts",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Weak context or mood understanding",
+        "Search and browse friction",
+        "Collaborative discovery gaps"
+      ],
+      "intents": [
+        "Match listening context",
+        "Discover socially",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Mood and context curators",
+        "Social discovery users"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-12",
+      "date": "2026-06-18",
+      "text": "Search in \"Add to playlist\" menu not working",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Weak context or mood understanding",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Match listening context",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Mood and context curators"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-14",
+      "date": "2026-06-18",
+      "text": "Discover Weekly playlist is blank or missing entirely",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Low novelty in discovery surfaces",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find genuinely new music",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Active explorers"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-15",
+      "date": "2026-06-18",
+      "text": "iOS app crashing when opening Spotify-curated playlists",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-16",
+      "date": "2026-06-18",
+      "text": "Collaborative playlist links not working",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Weak context or mood understanding",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Match listening context",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Mood and context curators"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-18",
+      "date": "2026-06-18",
+      "text": "Multiple car infotainment systems not loading playlists (GMC; Chevrolet)",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-19",
+      "date": "2026-06-18",
+      "text": "Public Playlists Not Visible Profiles",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-24",
+      "date": "2026-06-18",
+      "text": "CarPlay Playlists not loading",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-25",
+      "date": "2026-06-18",
+      "text": "[Android] App freezes/crashes when clicking on three-dot menu in playlist",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-34",
+      "date": "2026-06-18",
+      "text": "\"My Shazam Tracks\" playlist doesn't sync/add all shazamed tracks",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-35",
+      "date": "2026-06-18",
+      "text": "Shared Playlists section missing in Spotify Kids",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction",
+        "Collaborative discovery gaps"
+      ],
+      "intents": [
+        "Discover socially",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Social discovery users"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-38",
+      "date": "2026-06-18",
+      "text": "[Desktop] Doesn't show accurate number of songs saved anymore",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Library history overpowers exploration"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-40",
+      "date": "2026-06-18",
+      "text": "Playlist scrolling position resets when navigating away from the app",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Insufficient recommendation controls",
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Control the recommendation model",
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "Control seekers"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-41",
+      "date": "2026-06-18",
+      "text": "PS4 Quick Menu shows Playlists instead of a list Liked Songs",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    },
+    {
+      "source": "Spotify Community",
+      "id": "community-48",
+      "date": "2026-06-18",
+      "text": "Playlist in a bottle 2023 not showing up",
+      "rating": "",
+      "sentiment": {
+        "label": "mixed",
+        "score": 0,
+        "positive_terms": 0,
+        "negative_terms": 0
+      },
+      "themes": [
+        "Search and browse friction"
+      ],
+      "intents": [
+        "Find a specific song or artist"
+      ],
+      "segments": [
+        "General Spotify listeners"
+      ]
+    }
+  ]
+}
