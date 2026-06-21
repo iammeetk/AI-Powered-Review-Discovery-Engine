@@ -15,6 +15,19 @@ from src.review_discovery_engine import analyze, clean_records, load_csv
 ROOT = Path(__file__).parent
 OUTPUT_DIR = ROOT / "outputs"
 UPLOAD_DIR = ROOT / "data" / "uploads"
+STATE_KEYS = [
+    "uploaded_csv",
+    "scraped_links",
+    "analysis_results",
+    "extracted_themes",
+    "cached_dataset",
+    "latest_records",
+    "latest_summary",
+    "user_analysis",
+    "source_statuses",
+    "ask_answer",
+    "ask_evidence",
+]
 
 
 st.set_page_config(
@@ -22,6 +35,21 @@ st.set_page_config(
     page_icon="🔎",
     layout="wide",
 )
+
+
+def reset_user_dataset() -> None:
+    """Remove all user-provided dataset state before starting a new analysis."""
+    for key in STATE_KEYS:
+        st.session_state.pop(key, None)
+
+
+def clear_data() -> None:
+    reset_user_dataset()
+    st.rerun()
+
+
+def has_user_dataset() -> bool:
+    return bool(st.session_state.get("latest_records"))
 
 
 def link_config_from_url(url: str) -> dict:
@@ -117,6 +145,9 @@ def run_analysis_from_csv(csv_path: Path) -> dict:
     summary = analyze(cleaned, stats)
     st.session_state.latest_records = summary.get("records", [])
     st.session_state.latest_summary = summary
+    st.session_state.analysis_results = summary
+    st.session_state.extracted_themes = summary.get("theme_distribution", [])
+    st.session_state.cached_dataset = [record.__dict__ for record in cleaned]
     return compact_summary(summary)
 
 
@@ -220,6 +251,11 @@ with st.expander("Questions this system helps answer", expanded=True):
         """
     )
 
+if has_user_dataset():
+    _, clear_top = st.columns([5, 1])
+    if clear_top.button("Clear Data", key="clear_top", help="Reset all uploaded/scraped data and analysis outputs"):
+        clear_data()
+
 tab_current, tab_upload, tab_links, tab_ask = st.tabs(["Current analysis", "Upload CSV", "Paste links", "Ask reviews"])
 
 with tab_current:
@@ -234,7 +270,13 @@ with tab_current:
 
 with tab_upload:
     uploaded = st.file_uploader("Upload review CSV", type=["csv"])
-    if uploaded and st.button("Analyze uploaded CSV"):
+    upload_col, clear_col = st.columns([3, 1])
+    analyze_upload = upload_col.button("Analyze uploaded CSV", disabled=uploaded is None)
+    if clear_col.button("Clear Data", key="clear_upload", help="Reset uploaded CSV, scraped links, analysis, and Q&A state"):
+        clear_data()
+    if uploaded and analyze_upload:
+        reset_user_dataset()
+        st.session_state.uploaded_csv = uploaded.name
         UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
         path = UPLOAD_DIR / uploaded.name
         path.write_bytes(uploaded.getvalue())
@@ -250,7 +292,13 @@ with tab_links:
         placeholder="https://play.google.com/store/apps/details?id=com.spotify.music\nhttps://www.reddit.com/r/spotify/",
         height=140,
     )
-    if st.button("Scrape and analyze links"):
+    link_col, link_clear_col = st.columns([3, 1])
+    scrape_links = link_col.button("Scrape and analyze links", disabled=not links.strip())
+    if link_clear_col.button("Clear Data", key="clear_links", help="Reset uploaded CSV, scraped links, analysis, and Q&A state"):
+        clear_data()
+    if scrape_links:
+        reset_user_dataset()
+        st.session_state.scraped_links = links
         with st.spinner("Scraping links and analyzing collected reviews..."):
             analysis, statuses = collect_and_analyze_links(links)
         st.session_state.source_statuses = statuses
@@ -268,11 +316,25 @@ with tab_links:
 with tab_ask:
     st.markdown("### Ask your reviews Anything")
     st.caption("Answers use only the latest uploaded CSV or scraped-link dataset.")
-    question = st.text_input("Question", placeholder="What causes users to repeatedly listen to the same content?")
-    if st.button("Ask"):
+    dataset_ready = has_user_dataset()
+    if not dataset_ready:
+        st.info("Please upload data first.")
+    question = st.text_input(
+        "Question",
+        placeholder="What causes users to repeatedly listen to the same content?",
+        disabled=not dataset_ready,
+    )
+    ask_col, ask_clear_col = st.columns([3, 1])
+    ask_clicked = ask_col.button("Ask", disabled=not dataset_ready or not question.strip())
+    if ask_clear_col.button("Clear Data", key="clear_ask", help="Reset uploaded CSV, scraped links, analysis, and Q&A state"):
+        clear_data()
+    if ask_clicked:
         answer, evidence = answer_question(question)
-        st.write(answer)
-        if evidence:
+        st.session_state.ask_answer = answer
+        st.session_state.ask_evidence = evidence
+    if st.session_state.get("ask_answer"):
+        st.write(st.session_state.ask_answer)
+        if st.session_state.get("ask_evidence"):
             st.markdown("#### Evidence")
-            for item in evidence:
+            for item in st.session_state.ask_evidence:
                 st.info(f"{item.get('source', 'Review')}: {item.get('text', '')[:400]}")
