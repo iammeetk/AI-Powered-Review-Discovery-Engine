@@ -1,12 +1,18 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import json
+import os
 import re
 from datetime import date
 from pathlib import Path
 
 import pandas as pd
 import streamlit as st
+
+try:
+    from dotenv import load_dotenv
+except ImportError:  # pragma: no cover - optional local helper
+    load_dotenv = None
 
 from src.collect_sources import collect_link, cutoff_date, dedupe, write_csv
 from src.review_discovery_engine import analyze, clean_records, load_csv
@@ -24,17 +30,30 @@ STATE_KEYS = [
     "latest_records",
     "latest_summary",
     "user_analysis",
+    "current_analysis",
     "source_statuses",
     "ask_answer",
     "ask_evidence",
 ]
 
+if load_dotenv:
+    load_dotenv(ROOT / ".env")
+
 
 st.set_page_config(
     page_title="AI-Powered Review Discovery Engine",
-    page_icon="🔎",
+    page_icon="ðŸ”Ž",
     layout="wide",
 )
+
+
+def get_llm_api_key() -> str | None:
+    """Read an LLM API key from Streamlit secrets or local environment."""
+    try:
+        key = st.secrets.get("GROQ_API_KEY")
+    except Exception:
+        key = None
+    return key or os.getenv("GROQ_API_KEY")
 
 
 def reset_user_dataset() -> None:
@@ -239,6 +258,15 @@ def show_analysis(data: dict) -> None:
 st.title("AI-Powered Review Discovery Engine")
 st.caption("AI-powered system that analyzes user feedback at scale")
 
+llm_api_key = get_llm_api_key()
+with st.sidebar:
+    st.markdown("### LLM Access")
+    if llm_api_key:
+        st.success("API key detected. LLM access is configured.")
+    else:
+        st.info("Add GROQ_API_KEY to .env locally or Streamlit secrets in the cloud.")
+
+
 with st.expander("Questions this system helps answer", expanded=True):
     st.markdown(
         """
@@ -259,12 +287,15 @@ if has_user_dataset():
 tab_current, tab_upload, tab_links, tab_ask = st.tabs(["Current analysis", "Upload CSV", "Paste links", "Ask reviews"])
 
 with tab_current:
-    if st.button("Load current analysis"):
+    current_col, current_clear_col = st.columns([3, 1])
+    if current_col.button("Load current analysis"):
         summary_path = OUTPUT_DIR / "analysis_summary.json"
         if summary_path.exists():
             st.session_state.current_analysis = compact_summary(json.loads(summary_path.read_text(encoding="utf-8")))
         else:
             st.error("No existing analysis_summary.json found.")
+    if current_clear_col.button("Clear Data", key="clear_current", help="Reset current analysis display and all uploaded/scraped data"):
+        clear_data()
     if "current_analysis" in st.session_state:
         show_analysis(st.session_state.current_analysis)
 
@@ -338,3 +369,6 @@ with tab_ask:
             st.markdown("#### Evidence")
             for item in st.session_state.ask_evidence:
                 st.info(f"{item.get('source', 'Review')}: {item.get('text', '')[:400]}")
+
+
+
